@@ -54,7 +54,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `tipo`) VALUES
-(6, 'Nicolas', 'nicolasdoneda231@gmail.com', '$2y$10$FF6qEoVlgHo3MKEzBcsdr.R7XbK4ksPEuEu/bK26L9WI5AqdDBOkO', 'admin');
+(6, 'Nicolas', 'nicolasdoneda231@gmail.com', 'Nagibe123', 'admin');
 
 --
 -- Índices para tabelas despejadas
