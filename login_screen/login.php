@@ -1,19 +1,26 @@
 <?php
+session_start();
 require_once('../Assets/php/conexao.php'); // ajuste o caminho se necessário
 
-$email = $_POST['email'];
-$senha = $_POST['senha'];
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
 
-$sql = "SELECT * FROM usuarios WHERE email = ?";
-$stmt = $pdo->prepare($sql);
-$stmt->execute([$email]);
+    $sql = 'SELECT * FROM usuarios WHERE email = :email AND senha = :senha';
+    $stmt = $pdo -> prepare ($sql);
+    $stmt -> bindParam(':email', $email);
+    $stmt -> bindParam(':senha', $senha);
+    $stmt -> execute();
 
-$usuario = $stmt->fetch(PDO::FETCH_ASSOC);
-
-if ($usuario && password_verify($senha, $usuario['senha'])) {
-    echo "Bem-vindo, " . $usuario['nome'] . "! Você é um " . $usuario['tipo'];
-    // Aqui você pode iniciar sessão com session_start() se quiser
-} else {
-    echo "Email ou senha incorretos!";
+    if($stmt -> rowCount() >0){
+        $_SESSION['admin'] = true;
+        header("Location: ../admin_screen/admin.php");
+        exit;
+    }
+    else{
+        echo "Login inválido!";
+    }
 }
 ?>
+
