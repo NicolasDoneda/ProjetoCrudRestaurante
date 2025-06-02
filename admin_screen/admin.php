@@ -23,7 +23,7 @@ $pratos = $stmt -> fetchAll ();
 </head>
 <body>
     <h1>Área Administrativa - Pratos</h1>
-    <a href = "../Assets/php/conexao.php"> Cadastrar novo prato</a>| <a href = "../Assets/php/logout.php"> Sair</a>
+    <a href = "../Assets/php/create.php"> Cadastrar novo prato</a>| <a href = "../Assets/php/logout.php"> Sair</a>
     <hr>
     
     <?php foreach ($pratos as $prato): ?>
