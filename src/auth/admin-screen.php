@@ -7,11 +7,11 @@ $sql = "SELECT * FROM  pratos";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $pratos = $stmt->fetchAll();
-
 ?>
+<?php include 'header.php'; ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -49,6 +49,7 @@ $pratos = $stmt->fetchAll();
         </div>
         <hr>
     <?php endforeach; ?>
+        <!----- JS do Bootstrap ------->
     <script src="../../Assets/bootstrap/dist/js/bootstrap.bunde.js"></script>
 </body>
 
