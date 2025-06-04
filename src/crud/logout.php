@@ -1,6 +1,6 @@
 <?php
 session_start();
 session_destroy();
-header("Location: /ProjetoCrudRestaurante/login_screen/login.html");
+header("Location: /ProjetoCrudRestaurante/public/layouts/login_screen/login.html");
 exit();
 ?>

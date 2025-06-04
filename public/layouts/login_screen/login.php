@@ -1,6 +1,7 @@
 <?php
 session_start();
-require_once('../Assets/php/conexao.php'); // ajuste o caminho se necessário
+define('BASE_PATH', dirname(__DIR__, 3));
+require_once(BASE_PATH . '/src/conexao.php'); // ajuste o caminho se necessário
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     

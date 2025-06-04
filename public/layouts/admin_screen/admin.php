@@ -1,6 +1,7 @@
 <?php
-require_once('../Assets/php/verifica.php');
-require_once('../Assets/php/conexao.php');
+define('BASE_PATH', dirname(__DIR__, 3));
+require_once(BASE_PATH . '/src/conexao.php');
+require_once(BASE_PATH . '/src/crud/verifica.php');
 
 $sql = "SELECT * FROM  pratos";
 $stmt = $pdo->prepare($sql);
@@ -26,21 +27,25 @@ $pratos = $stmt->fetchAll();
 </head>
 
 <body>
-    <h1>Área Administrativa - Pratos</h1>
-    <a href="../Assets/php/create.php"> Cadastrar novo prato</a>| <a href="../Assets/php/logout.php"> Sair</a>
+    <h1> Área Administrativa - Pratos </h1>
+    <a href= "/ProjetoCrudRestaurante/src/crud/create.php"> Cadastrar novo prato </a> | <a href="/ProjetoCrudRestaurante/src/crud/logout.php"> Sair </a>
     <hr>
 
-    <?php foreach ($pratos as $prato): ?>
+    <?php 
+    foreach ($pratos as $prato): ?>
         <div>
             <h3> <?php echo htmlspecialchars($prato['nome']); ?> </h3>
             <p> <strong> Descrição:</strong> <?php echo htmlspecialchars($prato['descricao']); ?> </p>
             <p> <strong> Preço: </strong> <?php echo htmlspecialchars($prato['preco']); ?> </p>
-            <img src="<?php echo htmlspecialchars($prato['imagem']); ?> " alt="Imagem do prato" width="200">
+            <img src="/ProjetoCrudRestaurante/public/assets/php/exibir_imagem.php?img=<?= urlencode($prato['imagem']) ?>" alt="Imagem do prato" width="200">
+
+
+ 
 
             <!-- Links do delete e do edit -->
             <br> <br>
-            <a href="../Assets/php/edit.php?id=<?php echo $prato['id']; ?>"> Editar </a> |
-            <a href="../Assets/php/delete.php?id=<?php echo $prato['id']; ?>" onclick="return confirmarExclusao();">Deletar</a>
+            <a href="/ProjetoCrudRestaurante/src/crud/edit.php?id=<?php echo $prato['id']; ?>"> Editar </a> |
+            <a href="/ProjetoCrudRestaurante/src/crud/delete.php?id=<?php echo $prato['id']; ?>" onclick="return confirmarExclusao();">Deletar</a>
         </div>
         <hr>
     <?php endforeach; ?>
