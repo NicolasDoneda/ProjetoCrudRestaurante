@@ -1,6 +1,6 @@
 <?php
-require_once(__DIR__ . '/../../src/conexao.php');
-require_once(__DIR__ . '/../../src/crud/verifica.php');
+require_once('conexao.php');
+require_once('verifica.php');
 
 if (isset($_GET['id'])){
 

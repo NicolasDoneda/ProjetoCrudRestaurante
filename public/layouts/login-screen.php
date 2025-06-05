@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../Assets/php/conexao.php'); // ajuste o caminho se necessário
+require_once(__DIR__ . '/../../src/crud/conexao.php'); 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if($stmt -> rowCount() >0){
         $_SESSION['admin'] = true;
-        header("Location: ../admin_screen/admin.php");
+        header("Location: admin-screen.php");
         exit;
     }
     else{
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <body>
     <h2>Login</h2>
-    <form action="login.php" method="POST">
+    <form method="POST">
         <input type="email" name="email" placeholder="Email" required /> <br />
         <input type="password" name="senha" placeholder="Senha" required /> <br />
         <button type="submit"> Entrar </button>

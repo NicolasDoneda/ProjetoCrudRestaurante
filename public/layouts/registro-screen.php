@@ -1,5 +1,5 @@
 <?php
-require_once('../Assets/php/conexao.php'); // ajuste o caminho se necessário
+require_once('../Assets/php/conexao.php');
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
