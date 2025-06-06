@@ -32,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Login</title>
     <!-- CSS Global -->
     <link rel="stylesheet" href="../../Assets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../public/Assets/css/register&loginStyle.css">
 </head>
 
 <body>
