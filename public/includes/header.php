@@ -8,6 +8,8 @@
 </head>
 <header>
     <nav>
+    <img src = "/ProjetoCrudRestaurante/public/assets/images/images-header/logo-marca-al-dente.png" 
+    id = "logoMarcaRestaurante" alt = "Logo Marca do Restaurante">
         <ul>
             <li><a href="/ProjetoCrudRestaurante/public/index.php">Home</a></li>
             <li><a href="/ProjetoCrudRestaurante/public/layouts/cardapio-screen.php">Cardápio</a></li>
