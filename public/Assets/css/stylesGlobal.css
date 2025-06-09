@@ -1,5 +1,10 @@
 /* Arquivo de estilo .CSS utilizado para estilização global */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+
 
 * {
     margin: 0;
@@ -36,7 +41,7 @@ html {
     --shadowHover: 0 4px 12px rgba(0, 0, 0, 0.25);
 
     /* Tipografia */
-    --fontFamily: 'Cormorant Upright', serif;
+    --fontFamily: 'Inter', serif;
     --fontWeightLight: 300;
     --fontWeightRegular: 400;
     --fontWeightMedium: 500;
@@ -85,13 +90,6 @@ html {
 
 header {
     width: 100%;
-    height: 7vh;
-    background-color: var(--backgroundColorHeader);
-    font-family: var(--fontFamily);
-}
-header {
-    width: 100%;
-    height: 7vh;
     background-color: var(--backgroundColorHeader);
     font-family: var(--fontFamily);
     display: flex;
@@ -163,4 +161,20 @@ footer {
     height: 15vh;
     background-color: var(--backgroundColorFooter);
     color: var(--fontColorFooter)
+}
+
+
+.img-logo{
+    width: 100px;
+    height: 100px;
+}
+
+#bem-vindo{
+    font-family: 'Italianno', serif;
+
+}
+
+#cardapio{
+    font-family: 'Yeseva One',serif;
+
 }

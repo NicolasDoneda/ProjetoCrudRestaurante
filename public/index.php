@@ -10,10 +10,10 @@
     <link rel = "stylesheet" href = "./assets/css/stylesGlobal.css">
 </head>
 <body>
+    <main>
+        <h1>Index.PHP</h1>
+    </main>
+    
 </body>
-<main>
-<h1>Index.PHP</h1>
-</main>
-
 </html>
 <?php include '/ProjetoCrudRestaurante/public/includes/footer.php'; ?>

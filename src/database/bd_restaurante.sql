@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21/05/2025 às 19:36
+-- Tempo de geração: 09/06/2025 às 19:27
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -35,6 +35,17 @@ CREATE TABLE `pratos` (
   `imagem` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Despejando dados para a tabela `pratos`
+--
+
+INSERT INTO `pratos` (`id`, `nome`, `descricao`, `preco`, `imagem`) VALUES
+(6, 'bebe', 'bebe do bem', 4555.00, '6841cd8ce3f7d_imagem.png'),
+(7, 'Macarrao Gostoso', 'Massa al dente envolvida em um molho pesto fresco feito com manjericão, pinhões e azeite extra virgem. Finalizado com queijo parmesão ralado na hora para um toque cremoso e saboroso.', 20.00, '6844f0c4cb657_comida.webp'),
+(8, 'Comida gostosa', 'Peito de frango suculento grelhado na brasa, acompanhado de legumes frescos salteados no alho e azeite, temperados com ervas finas para um sabor leve e nutritivo.', 50.00, '6844f3a97cb52_comidagostosa.webp'),
+(9, 'Nicolas', 'Massa al dente envolvida em um molho pesto fresco feito com manjericão, pinhões e azeite extra virgem. Finalizado com queijo parmesão ralado na hora para um toque cremoso e saboroso.', 50.00, '6844f3f88647f_comidagostosa.webp'),
+(10, 'Nicolas Doneda', 'Massa al dente envolvida em um molho pesto fresco feito com manjericão, pinhões e azeite extra virgem. Finalizado com queijo parmesão ralado na hora para um toque cremoso e saboroso.', 50.00, '6844f40266748_comidagostosa.webp');
+
 -- --------------------------------------------------------
 
 --
@@ -54,7 +65,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `tipo`) VALUES
-(6, 'Nicolas', 'nicolasdoneda231@gmail.com', 'Nagibe123', 'admin');
+(7, 'Nicolas', 'nicolasdoneda231@gmail.com', 'Nagibe123', 'admin');
 
 --
 -- Índices para tabelas despejadas
@@ -81,13 +92,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `pratos`
 --
 ALTER TABLE `pratos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
