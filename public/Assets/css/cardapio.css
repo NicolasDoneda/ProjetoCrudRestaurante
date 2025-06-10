@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+
+
+
+/* bandeira da italia */
+#verde{
+    background-color: #3A6B35;
+    width: 4vw;
+    height: 0.35vw;
+    border-radius: 1vw 0 0 1vw;
+    
+}
+#branco{
+    background-color: #ffff;
+    width: 4vw;
+    height: 0.35vw;
+
+
+}
+#vermelho{
+    background-color: #B22222;
+    width: 4vw;
+    height: 0.35vw;
+    border-radius: 0 1vw 1vw 0;
+
+
+}
+
+/* bandeira arabia */
+#arabia{
+    background-color: #085936;
+    width: 12vw;
+    height: 0.35vw;
+    border-radius: 1vw;
+    margin-top: 0.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#img-espada{
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.card-pratos{
+    background-color: #ffff;
+    min-width: 20vw;
+    padding-bottom: 1vw;
+    flex-direction: column;
+    box-shadow: -0.3125vw 0.3125vw 0.78125vw 0px rgba(0,0,0,0.35);
+}
+
+.container-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5vw;
+}
+.img-pratos{
+    width: 17vw;
+    height: 8.908vw;
+    
+}
+#line-img{
+    display: flex;
+    width: 17vw;
+    height: 0.01vw;
+    background-color: #000000;
+    justify-self: center;
+}
+#card-tittle{
+    color: #B41C32;
+    font-family: 'Yeseva One';
+    text-align: center;
+    font-size: 1.8vw;
+    line-height: 1vw;
+    margin-top: 1vw;
+
+
+
+}
+#card-desc{
+    font-family: 'Lora';
+    font-size: 0.9vw;
+    text-align: justify;
+
+
+
+
+}
+#container-text-card{
+    justify-self: center;
+    width: 17vw;
+    height: 11.25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#container-card{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80vw;
+    column-gap: 10vw;
+    row-gap: 5vw;
+    margin: 1.5vw auto;
+
+
+
+}

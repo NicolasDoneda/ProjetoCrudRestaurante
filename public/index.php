@@ -1,5 +1,5 @@
-<?php include '../public/includes/header.php'; ?>
-<?php include '../public/includes/footer.php'; ?>
+<?php include '/ProjetoCrudRestaurante/public/includes/header.php'; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,9 +10,10 @@
     <link rel = "stylesheet" href = "./assets/css/stylesGlobal.css">
 </head>
 <body>
+    <main>
+        <h1>Index.PHP</h1>
+    </main>
+    
 </body>
-<main>
-<h1>Index.PHP</h1>
-</main>
-
 </html>
+<?php include '/ProjetoCrudRestaurante/public/includes/footer.php'; ?>
