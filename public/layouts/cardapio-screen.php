@@ -31,8 +31,8 @@ include(__DIR__ . '/../includes/header.php');
 
     <!--- Parte do confira nosso cardapio ---->
     <div class = 'd-flex align-items-center flex-column mt-3'>
-        <p id= 'bem-vindo' class = 'fs-2  lh-1 mb-0 mt-1' style ='color: #3A6B35'> Confira Nosso </p>
-        <p id = 'cardapio' class ='fs-1 lh-1' style = 'color: #892232' > Cardápio </p>
+        <p id= 'bem-vindo'> Confira Nosso </p>
+        <p id= 'cardapio'> Cardápio </p>
     </div>
     <!--- Bandeiras italia e arabia ---->
     <div class = 'd-flex align-items-center flex-row justify-content-center' >
@@ -58,8 +58,8 @@ include(__DIR__ . '/../includes/header.php');
                         <h3 id = 'card-tittle'> <?php echo htmlspecialchars($prato['nome']); ?> </h3>
                         <div id = 'line-img'></div>
                         <div id ='container-text-card'>
-                        <p id ='card-desc'><?php echo htmlspecialchars($prato['descricao']); ?> </p>
-                        <p class = 'card-text'> R$  <?php echo htmlspecialchars($prato['preco']); ?> </p>
+                        <p id ='card-desc'> <?php echo htmlspecialchars($prato['descricao']); ?> </p>
+                        <p id = 'preco-card'> R$ <?php echo htmlspecialchars($prato['preco']); ?> </p>
                         </div>
                 </div>
             </div>

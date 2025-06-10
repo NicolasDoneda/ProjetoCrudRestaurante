@@ -114,3 +114,20 @@
 
 
 }
+
+#preco-card{
+    font-size: 1.3vw;
+    
+
+}
+#bem-vindo{
+    font-size: 2.2vw;
+    line-height: 0.1vw;
+    margin: 3vw 0 0 0;
+    color: #3A6B35;     
+}
+#cardapio{
+    font-size:3vw;
+    line-height: 3.5vw;
+    color: #892232;
+}
