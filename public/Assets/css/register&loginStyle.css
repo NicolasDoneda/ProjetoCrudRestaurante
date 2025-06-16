@@ -1,18 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
+
+
+
+
+
 body {
-    font-family:Arial, Helvetica, sans-serif;
-    background: #f5f5f5;
-    text-align: center;
-    padding: 30px;
+    background-image: url('../images/images-login-register/fundo-login-register.png');
+    background-size: cover;
+
 }
-input, button {
-    margin:10px;
-    padding: 10px;
-    width: 250px;
+body::before{
+    content:'';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(20,16,16,0.43);
+    z-index: 0;
+
 }
-form {
-    background: #fff;
-    padding: 20px;
-    display: inline-block;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #ccc;
+#div-fundo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+
+}
+.div-content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 90%;
+    height: 42vw;
+    border: 0.5vw solid #CD7F32;
+    border-radius: 2.2vw;
+
+}
+
+.container-card-login {
+    background-color: #5B1D1D;
+    width: 45%;
+    height: 100%;
+    margin-top: 0.1vw;
+
+    border-style: solid;
+    border-color: #CD7F32;
+
+    border-top-width: 0.1vw;
+    border-right-width: 0.5vw;
+    border-bottom-width: 0.6vw;
+    border-left-width: 0.1vw;
+
+    border-top-left-radius: 1.5vw;
+    border-bottom-left-radius: 2vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+h1{
+    color:#CD7F32;
+    font-size: 3.3vw;
+    
+    
+}
+
+img{
+    width: 200px;
+    height: 200px;
+
+}
+
+input{
+    align-self: center;
+    width: 20vw;
+    height: 2.5vw;
+    margin: 1vw;
+    background-color: #5B1D1D;
+    border-style: solid;
+    border-color: #CD7F32;
+    padding-left: 0.5vw;
+    color: #CD7F32;
+    font-size: 1.3vw;
+}
+input::placeholder{
+    color: #CD7F32;
+    font-family: 'Yeseva One';
+    font-size: 1.1vw;
+
+}
+input:focus{
+    background-color: #5B1D1D;
+    color: #CD7F32;
+    outline: none;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+button{
+    width: 12vw;
+    height: 3vw;
+    align-self: center;
+    margin: 0 auto;
+    display: block;
+    background-color: #CD7F32;
+    border-style: none;
+    font-family: 'Yeseva One';
+    color: #5B1D1D;
+    font-size: 1.7vw;
+    border-radius: 0.6vw;
+    margin-bottom: 1vw;
+
+
+}
+
+.circulo{
+    width: 11vw;
+    height: 11vw;
+    margin: 0 auto;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #CD7F32;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#AL{
+    font-size: 3.6vw;
+    line-height: 3.3vw;
+    margin: 0;
+    color: #CD7F32;
+    font-family: 'Cinzel Decorative';
+    margin-right: 0.5vw;
+}
+#EZA{
+    font-size: 3.6vw;
+    line-height: 3.4vw;
+    margin: 0;
+    color: #CD7F32;
+    margin-bottom: 1vw;
+    font-family: 'Cinzel Decorative';
+    margin-right: 0.5vw;
+}
+
+
+img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30vw;
+    height: 30vw;
+    pointer-events: none;
+    z-index: 1;
+
+}
+
+.balao {
+  position: absolute; /* para posicionar perto do boneco */
+  bottom: 19vw;        /* ajusta conforme quiser */
+  left: 66vw;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #CD7F32;
+  padding: 0.8vw 1.2vw;
+  border-radius: 1vw;
+  font-family: 'Lora';
+  font-size: 2vw;
+  max-width: 12vw;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+
+}
+
+/* Triângulo do balão */
+.balao::after {
+  content: "";
+  position: absolute;
+  bottom: -1.4vw; /* posição abaixo do balão */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0.8vw;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+select{
+    align-self: center;
+    width: 20vw;
+    height: 2.5vw;
+    margin: 1vw;
+    background-color: #5B1D1D;
+    border-style: solid;
+    border-color: #CD7F32;
+    padding-left: 0.5vw;
+    color: #CD7F32;
+    font-size: 1.3vw;
 }
