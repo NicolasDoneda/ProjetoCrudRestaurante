@@ -1,0 +1,156 @@
+/* ===============================
+  Arquivo de Estilização do Header e do Footer
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap');
+
+header,
+footer {
+    font-family: 'Cormorant Upright', serif !important;
+}
+
+:root {
+    /* Cores principais */
+    --color-header-bg: #7d0823;
+    --color-footer-bg: #3A6B35;
+
+    /* Cores do texto */
+    --color-footer-text: #ffffff;
+    --color-hover: #4c180d;
+
+    /* Tipografia */
+    --font-family: 'Cormorant Upright', serif;
+    --font-weight-bold: 700;
+    --font-weight-semibold: 600;
+
+    /* Tamanhos de fonte */
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2rem;
+
+    /* Espaçamentos */
+    --spacing-lg: 24px;
+
+    /* Transições */
+    --transition-fast: 150ms ease-in-out;
+    --transition-default: 300ms ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+/* ===============================
+   HEADER
+================================ */
+
+header {
+    width: 100%;
+    height: 14vh;
+    background-color: var(--color-header-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fontFamily);
+}
+
+.header__logo {
+    max-width: 250px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-lg);
+}
+
+nav ul li a {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-footer-text);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color var(--transition-fast);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--color-footer-text);
+    transition: width var(--transition-fast);
+}
+
+nav ul li a:hover {
+    color: var(--color-hover);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.user-icon {
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
+    transition: var(--transition-default);
+}
+
+.user-icon:hover {
+    transform: translateY(-5px);
+}
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+footer {
+    font-family: var(--font-family);
+    background-color: var(--color-footer-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 4rem;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.footer-logo {
+    width: 200px;
+}
+
+.footer-logo img {
+    width: 100%;
+    display: block;
+}
+
+.footer-title {
+    font-size: var(--font-size-xxl);
+    color: var(--color-footer-text);
+    text-align: center;
+}
