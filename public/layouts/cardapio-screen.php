@@ -2,6 +2,13 @@
 require_once(__DIR__ . '/../../src/crud/conexao.php');
 require_once(__DIR__ . '/../../src/crud/verifica.php');
 
+$mensagem_sucesso = '';
+if (isset($_SESSION['mensagem_sucesso'])) {
+    $mensagem_sucesso = $_SESSION['mensagem_sucesso'];
+    unset($_SESSION['mensagem_sucesso']); // Limpa a mensagem após exibir
+}
+
+
 // Buscar categorias para o filtro
 $sqlCategorias = "SELECT * FROM categoria";
 $stmtCategorias = $pdo->prepare($sqlCategorias);
@@ -49,6 +56,16 @@ include(__DIR__ . '/../includes/header.php');
 
 <body>
 
+    <?php if ($mensagem_sucesso): ?>
+        <div class="alert alert-success alert-dismissible fade show mt-3 mx-auto" role="alert" style="max-width: 800px;">
+            <?= htmlspecialchars($mensagem_sucesso) ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php endif; ?>
+
+
+
+
     <!--- Parte do confira nosso cardapio ---->
     <div class='d-flex align-items-center flex-column mt-3'>
         <p id='bem-vindo'> Confira Nosso </p>
@@ -83,6 +100,7 @@ include(__DIR__ . '/../includes/header.php');
     <!--- parte dos cards dos pratos ---->
     <div id='container-card'>
         <?php foreach ($pratos as $prato): ?>
+            <a href="/ProjetoCrudRestaurante/src/crud/adicionar-carrinho.php?id=<?= $prato['id'] ?>" class="text-decoration-none text-dark">
             <div class='card-pratos'>
                 <div class='container-img'>
                     <img class='img-pratos' src='/ProjetoCrudRestaurante/public/assets/php/exibir_imagem.php?img=<?= urlencode($prato['imagem']) ?>' alt='Imagem do prato'>
@@ -97,11 +115,12 @@ include(__DIR__ . '/../includes/header.php');
                     <p id='preco-card'>R$ <?= htmlspecialchars($prato['preco']) ?></p>
                 </div>
             </div>
+            </a>
         <?php endforeach; ?>
     </div>
 
     <!----- JS do Bootstrap ------->
-    <script src='../../Assets/bootstrap/dist/js/bootstrap.bunde.js'></script>
+    <script src='../Assets/bootstrap/dist/js/bootstrap.bundle.js'></script>
 </body>
 
 </html>
