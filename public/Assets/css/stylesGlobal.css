@@ -1,5 +1,10 @@
 /* Arquivo de estilo .CSS utilizado para estilização global */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+
 
 * {
     margin: 0;
@@ -36,27 +41,20 @@ html {
     --shadowHover: 0 4px 12px rgba(0, 0, 0, 0.25);
 
     /* Tipografia */
-    --fontFamily: 'Cormorant Upright', serif;
+    --fontFamily: 'Inter', serif;
     --fontWeightLight: 300;
     --fontWeightRegular: 400;
     --fontWeightMedium: 500;
     --fontWeightSemiBold: 600;
     --fontWeightBold: 700;
 
-    --fontSizeXs: 0.75rem;
-    /* 12px */
-    --fontSizeSm: 0.875rem;
-    /* 14px */
-    --fontSizeMd: 1rem;
-    /* 16px */
-    --fontSizeLg: 1.25rem;
-    /* 20px */
-    --fontSizeXl: 1.5rem;
-    /* 24px */
-    --fontSizeXxl: 2rem;
-    /* 32px */
-    --fontSizeTitle: 2.5rem;
-    /* 40px */
+    --fontSizeXs: 0.75rem;    /* 12px */
+    --fontSizeSm: 0.875rem;   /* 14px */
+    --fontSizeMd: 1rem;       /* 16px */
+    --fontSizeLg: 1.25rem;    /* 20px */
+    --fontSizeXl: 1.5rem;     /* 24px */
+    --fontSizeXxl: 2rem;      /* 32px */
+    --fontSizeTitle: 2.5rem;  /* 40px */
 
     --lineHeightSm: 1.2;
     --lineHeightMd: 1.5;
@@ -90,30 +88,26 @@ html {
     --cursorPointer: pointer;
 }
 
-/* Configurações do Header */
 header {
     width: 100%;
-    height: 14vh;
     background-color: var(--backgroundColorHeader);
     font-family: var(--fontFamily);
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-#logoMarcaRestaurante {
-    max-width: 250px;
 }
 
 nav {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 var(--spacingMd);
 }
 
 nav a {
-    font-size: var(--fontSizeXl);
+    font-size: var(--fontSizeMd);
     font-weight: var(--fontWeightBold);
     color: var(--fontColorFooter);
     text-decoration: none;
@@ -131,7 +125,7 @@ nav ul {
 }
 
 nav ul li a {
-    font-size: var(--fontSizeLg);
+    font-size: var(--fontSizeMd);
     font-weight: var(--fontWeightSemiBold);
     color: var(--fontColorFooter);
     text-decoration: none;
@@ -159,18 +153,6 @@ nav ul li a:hover {
     color: var(--fontColorTitle);
 }
 
-/* Configurações do Home */
-#bannerPrincipal {
-    width: 100%;
-    height: 75vh;
-    background-image: url('../images/images-home/banner.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: firebrick;
-}
-
-/* Configurações do Footer */
 footer {
     display: flex;
     align-items: center;
@@ -179,4 +161,20 @@ footer {
     height: 15vh;
     background-color: var(--backgroundColorFooter);
     color: var(--fontColorFooter)
+}
+
+
+.img-logo{
+    width: 100px;
+    height: 100px;
+}
+
+#bem-vindo{
+    font-family: 'Italianno', serif;
+
+}
+
+#cardapio{
+    font-family: 'Yeseva One',serif;
+
 }

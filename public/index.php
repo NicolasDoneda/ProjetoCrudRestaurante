@@ -5,8 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Home - Al Dente & Za’atar</title>
-    <link rel="stylesheet" href="./assets/css/homeScreenStyle.css" />
-    <link rel="stylesheet" href="./assets/css/headerFooterStyle.css" />
+    <link rel="stylesheet" href="./assets/css/homeScreenStyle.css"/>
+    <link rel="stylesheet" href="./assets/css/headerFooterStyle.css"/>
+    <link rel = "stylesheet" href = "./assets/css/bootstrap.min.css"/>
 </head>
 
 <body>
@@ -24,13 +25,47 @@
         </section>
 
         <section class="secao-mais-pedidos">
-            <h2 class="titulo-principal-home">Os mais pedidos!</h2>
+            <h2 class="titulo-principal-home">Mais Pedidos</h2>
+            <div class="MaisPedidosCarrosel-container">
+                <div id="MaisPedidosCarrosel" class="carousel slide" data-bs-ride="carousel">
+                    
+                    <!-- INDICADORES DE POSIÇÃO -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#MaisPedidosCarrosel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#MaisPedidosCarrosel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#MaisPedidosCarrosel" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <!-- ITENS DO CARROSEL -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/images/images-home/prato1.png" class="d-block w-100 img-fluid MaisPedidosCarrosel-prato-img" alt="Prato 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/images-home/prato2.png" class="d-block w-100 img-fluid MaisPedidosCarrosel-prato-img" alt="Prato 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/images-home/prato3.png" class="d-block w-100 img-fluid MaisPedidosCarrosel-prato-img" alt="Prato 3">
+                        </div>
+                    </div>
+
+                    <!-- Controles -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#MaisPedidosCarrosel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#MaisPedidosCarrosel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <?php include '../public/includes/footer.php'; ?>
     </footer>
+    <script src="../public/assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
