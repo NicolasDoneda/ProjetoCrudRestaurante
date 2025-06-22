@@ -1,103 +1,95 @@
-<?php 
-    session_start();
+<?php
+session_start();
 
-    $carrinho = $_SESSION['carrinho']??[];
+$carrinho = $_SESSION['carrinho'] ?? [];
 
-    if($_SERVER['REQUEST_METHOD']==='POST'){
-        $id = $_POST['id'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $id = $_POST['id'];
 
-        if ($_POST['acao'] === 'aumentar'){
-            $carrinho[$id]['quantidade']++;
+    if ($_POST['acao'] === 'aumentar') {
+        $carrinho[$id]['quantidade']++;
+    } elseif ($_POST['acao'] === 'diminuir') {
+        $carrinho[$id]['quantidade']--;
+        if ($carrinho[$id]['quantidade'] <= 0) {
+            unset($carrinho[$id]);
         }
-        elseif($_POST['acao'] === 'diminuir'){
-            $carrinho[$id]['quantidade']--;
-
-            if($carrinho [$id]['quantidade'] <= 0){
-                unset($carrinho[$id]);
-            }
-        }
-        elseif($_POST['acao'] === 'remover'){
-            unset( $carrinho[$id] );
-        }
-
-        $_SESSION['carrinho'] = $carrinho;
-        header("Location: pedidos-screen.php");
-        exit;
+    } elseif ($_POST['acao'] === 'remover') {
+        unset($carrinho[$id]);
     }
-?> 
+
+    $_SESSION['carrinho'] = $carrinho;
+    header("Location: pedidos-screen.php");
+    exit;
+}
+?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+
 <head>
-    <title>Seu Pedido</title>
-    <link rel='stylesheet' href='../Assets/bootstrap/dist/css/bootstrap.min.css'>
+    <meta charset="UTF-8">
+    <title>Seu Pedido - Al Dente & Za’atar</title>
+    <link rel="stylesheet" href="../assets/css/pedidosStyle.css">
 </head>
-<body class="p-5">
+
+<body>
     <header>
-    <?php include '../public/includes/header.php'; ?>
+        <?php include(__DIR__ . '/../includes/header.php'); ?>
     </header>
-    <h2>Seu Pedido</h2>
 
-    <?php if (empty($carrinho)): ?>
-        <p>Seu carrinho está vazio.</p>
-    <?php else: ?>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Prato</th>
-                    <th>Imagem</th>
-                    <th>Preço</th>
-                    <th>Quantidade</th>
-                    <th>Total</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
+    <main>
+        <section class="pedidos-content">
+            <h2 class="tituloSecundario">Carrinho de compras</h2>
+
+            <?php if (empty($carrinho)): ?>
+                <p style="text-align: center;">Seu carrinho está vazio.</p>
+            <?php else: ?>
                 <?php $totalGeral = 0; ?>
-                <?php foreach ($carrinho as $item): ?>
-                    <?php $total = $item['preco'] * $item['quantidade']; ?>
-                    <?php $totalGeral += $total; ?>
-                    <tr>
-                        <td><?= htmlspecialchars($item['nome']) ?></td>
-                        <td><img src='/ProjetoCrudRestaurante/public/assets/php/exibir_imagem.php?img=<?= urlencode($item['imagem']) ?>' width="80"></td>
-                        <td>R$ <?= number_format($item['preco'], 2, ',', '.') ?></td>
-                        <td><?= $item['quantidade'] ?></td>
-                        <td>R$ <?= number_format($total, 2, ',', '.') ?></td>
-                        <td>
-                            <form method="POST" style="display:inline;">
-                                <input type="hidden" name="id" value="<?= $item['id'] ?>">
-                                <button name="acao" value="aumentar" class="btn btn-success btn-sm">+</button>
-                            </form>
-                            <form method="POST" style="display:inline;">
-                                <input type="hidden" name="id" value="<?= $item['id'] ?>">
-                                <button name="acao" value="diminuir" class="btn btn-warning btn-sm">-</button>
-                            </form>
-                            <form method="POST" style="display:inline;">
-                                <input type="hidden" name="id" value="<?= $item['id'] ?>">
-                                <button name="acao" value="remover" class="btn btn-danger btn-sm">Remover</button>
-                            </form>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-                <tr>
-                    <td colspan="4"><strong>Total Geral:</strong></td>
-                    <td><strong>R$ <?= number_format($totalGeral, 2, ',', '.') ?></strong></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+                <div class="carrinho-conteudo">
+                    <div class="lista-itens">
+                        <?php foreach ($carrinho as $item): ?>
+                            <?php $total = $item['preco'] * $item['quantidade']; ?>
+                            <?php $totalGeral += $total; ?>
 
-        <button onclick="confirmarPedido()" class="btn btn-primary mt-3">Confirmar Pedido</button>
-    <?php endif; ?>
-<footer>
-<?php include '../public/includes/footer.php'; ?>
-</footer>
+                            <div class="item-carrinho">
+                                <img src="/ProjetoCrudRestaurante/public/assets/php/exibir_imagem.php?img=<?= urlencode($item['imagem']) ?>" alt="<?= htmlspecialchars($item['nome']) ?>">
+                                <div class="info-prato">
+                                    <h3 class="nome-prato"><?= htmlspecialchars($item['nome']) ?></h3>
+                                    <div class="controle-quantidade">
+                                        <form method="POST" style="display:inline;">
+                                            <input type="hidden" name="id" value="<?= $item['id'] ?>">
+                                            <button name="acao" value="diminuir" class="btn-controle">-</button>
+                                        </form>
+                                        <span class="quantidade"><?= str_pad($item['quantidade'], 2, '0', STR_PAD_LEFT) ?></span>
+                                        <form method="POST" style="display:inline;">
+                                            <input type="hidden" name="id" value="<?= $item['id'] ?>">
+                                            <button name="acao" value="aumentar" class="btn-controle">+</button>
+                                        </form>
+                                    </div>
+                                    <p class="preco">R$ <?= number_format($item['preco'], 2, ',', '.') ?></p>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+
+                    <div class="box-subtotal">
+                        <p class="resumo">Subtotal (<?= count($carrinho) ?> produto<?= count($carrinho) > 1 ? 's' : '' ?>):<br><strong>R$ <?= number_format($totalGeral, 2, ',', '.') ?></strong></p>
+                        <button onclick="confirmarPedido()" class="botao-fechar">Fechar pedido</button>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </section>
+    </main>
+
     <script>
         function confirmarPedido() {
             alert("Pedido confirmado! Obrigado.");
             window.location.href = '../../src/crud/limpar-carrinho.php';
         }
     </script>
+    <footer>
+        <?php include(__DIR__ . '/../includes/footer.php'); ?>
+    </footer>
 </body>
+
 </html>
-<?php include(__DIR__ . '/../includes/footer.php')?>

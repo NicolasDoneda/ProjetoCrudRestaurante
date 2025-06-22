@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
-
+body{
+    background-color: #E3DBCC;
+}
 :root {
     /* Cores */
     --backgroundColorAdmin: #f5f5f5;
     --cardBackground: #fff;
     --borderColorAdmin: #CD7F32;
-    --textColorAdmin: #5a2a27;
+    --textColorAdmin: #673c11;
     --textColorDesc: #333;
     --linkColor: #B41C32;
     --linkHoverColor: #892232;
@@ -35,11 +37,9 @@
     --imgWidth: 200px;
     --imgBorderRadius: 0.5rem;
 }
-main {
+
+.container-main {
     flex: 1;
-  }
-  
-body {
     background-color: var(--backgroundColorAdmin);
     font-family: var(--fontFamilyInter);
     color: var(--textColorAdmin);
@@ -48,8 +48,7 @@ body {
     padding: 0 1rem;
 }
 
-/* Título principal */
-h1 {
+.titulo-principal {
     font-family: var(--fontFamilyYesevaOne);
     font-size: var(--fontSizeTitle);
     text-align: center;
@@ -57,7 +56,7 @@ h1 {
 }
 
 /* Links no topo */
-a {
+.link-topo {
     font-weight: 600;
     font-size: var(--fontSizeLink);
     color: var(--linkColor);
@@ -66,17 +65,16 @@ a {
     transition: color 0.3s ease;
 }
 
-a:last-child {
+.link-topo:last-child {
     margin-right: 0;
 }
 
-a:hover {
+.link-topo:hover {
     color: var(--linkHoverColor);
     text-decoration: underline;
 }
 
-/* Container do prato */
-div {
+.card-prato {
     background-color: var(--cardBackground);
     box-shadow: var(--boxShadowCard);
     padding: var(--paddingCard);
@@ -84,35 +82,26 @@ div {
     margin-bottom: var(--marginCardBottom);
 }
 
-/* Título do prato */
-div > h3 {
+.titulo-prato {
     font-family: var(--fontFamilyYesevaOne);
     font-size: var(--fontSizeCardTitle);
     margin-bottom: 0.5rem;
     color: var(--textColorAdmin);
 }
 
-/* Descrição */
-p {
+.descricao-prato {
     font-family: var(--fontFamilyLora);
     font-size: var(--fontSizeDesc);
     color: var(--textColorDesc);
-    margin: 0.3rem 0;
+    margin: 0.3rem ;
 }
 
-/* Preço */
-p strong {
-    font-weight: 700;
-}
-
-p:last-of-type {
-    font-size: var(--fontSizePreco);
+.texto-negrito {
     font-weight: 700;
     color: var(--linkColor);
+    font-size: var(--fontSizePreco);
 }
 
-/* Imagem do prato */
-/* Imagem dos pratos apenas */
 .img-prato {
     display: block;
     width: var(--imgWidth);
@@ -122,36 +111,69 @@ p:last-of-type {
     border: 1px solid var(--borderColorAdmin);
 }
 
-
-/* Links editar/deletar */
-div > a {
+.links-editar-deletar > a {
     font-size: var(--fontSizeLink);
     color: var(--linkColor);
     font-weight: 600;
     margin-right: 1.5rem;
 }
 
-div > a:hover {
+.links-editar-deletar > a:hover {
     color: var(--linkHoverColor);
     text-decoration: underline;
 }
 
-/* Linha separadora */
-hr {
+.linha-separadora {
     border: none;
     border-top: 1px solid #ddd;
     margin: 1.5rem 0;
 }
 
-/* Responsividade */
+/* ===============================
+  RESPONSIVIDADE
+================================ */
+
+@media (max-width: 900px) {
+    .container-main {
+        max-width: 100%;
+        margin: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .img-prato {
+        width: 150px;
+    }
+    
+    .titulo-principal {
+        font-size: 2rem;
+    }
+    
+    .card-prato {
+        padding: 1rem 1.5rem;
+    }
+}
+
 @media (max-width: 600px) {
-    body {
+    .container-main {
         margin: 1rem;
         padding: 0 0.5rem;
     }
 
-    img {
+    .img-prato {
         width: 100%;
         max-width: 100%;
+    }
+    
+    .titulo-principal {
+        font-size: 1.5rem;
+    }
+    
+    .card-prato {
+        padding: 1rem;
+    }
+    
+    .link-topo {
+        font-size: 0.9rem;
+        margin-right: 1rem;
     }
 }

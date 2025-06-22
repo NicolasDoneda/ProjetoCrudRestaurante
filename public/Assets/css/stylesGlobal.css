@@ -1,10 +1,7 @@
-/* Arquivo de estilo .CSS utilizado para estilização global */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
-
-
 
 * {
     margin: 0;
@@ -15,7 +12,6 @@
 html {
     scroll-behavior: smooth;
 }
-
 :root {
     /* Cores principais */
     --backgroundColorHeader: #7d0823;
@@ -28,15 +24,18 @@ html {
     --backgroundColorInput: #ffffff;
     --backgroundColorInputFocus: #f8f3ee;
 
+    /* Cores de texto */
     --fontColorTitle: #b41c32;
     --fontColorTextPrimary: #3a3a3a;
     --fontColorTextSecondary: #6e6e6e;
     --fontColorFooter: #e3dbcc;
 
+    /* Bordas */
     --borderColorDefault: #b41c32;
     --borderColorInput: #ccc;
     --borderColorInputFocus: #7d0823;
 
+    /* Sombras */
     --shadowDefault: 0 2px 6px rgba(0, 0, 0, 0.15);
     --shadowHover: 0 4px 12px rgba(0, 0, 0, 0.25);
 
@@ -56,6 +55,7 @@ html {
     --fontSizeXxl: 2rem;      /* 32px */
     --fontSizeTitle: 2.5rem;  /* 40px */
 
+    /* Alturas de linha */
     --lineHeightSm: 1.2;
     --lineHeightMd: 1.5;
     --lineHeightLg: 1.8;
@@ -68,7 +68,7 @@ html {
     --spacingXl: 32px;
     --spacingXxl: 48px;
 
-    /* Bordas */
+    /* Bordas arredondadas */
     --borderRadiusSm: 4px;
     --borderRadiusMd: 8px;
     --borderRadiusLg: 12px;
@@ -78,7 +78,7 @@ html {
     --transitionDefault: 300ms ease-in-out;
     --transitionSlow: 500ms ease-in-out;
 
-    /* Breakpoints responsivos */
+    /* Breakpoints */
     --breakpointSm: 576px;
     --breakpointMd: 768px;
     --breakpointLg: 992px;
@@ -87,94 +87,13 @@ html {
     /* Cursor */
     --cursorPointer: pointer;
 }
-
-header {
-    width: 100%;
-    background-color: var(--backgroundColorHeader);
-    font-family: var(--fontFamily);
-    display: flex;
-    align-items: center;
-}
-
-nav {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 var(--spacingMd);
-}
-
-nav a {
-    font-size: var(--fontSizeMd);
-    font-weight: var(--fontWeightBold);
-    color: var(--fontColorFooter);
-    text-decoration: none;
-    transition: var(--transitionDefault);
-}
-
-nav a:hover {
-    color: var(--fontColorTitle);
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: var(--spacingLg);
-}
-
-nav ul li a {
-    font-size: var(--fontSizeMd);
-    font-weight: var(--fontWeightSemiBold);
-    color: var(--fontColorFooter);
-    text-decoration: none;
-    position: relative;
-    padding-bottom: 4px;
-    transition: color var(--transitionFast);
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0;
-    background-color: var(--fontColorFooter);
-    transition: width var(--transitionFast);
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-nav ul li a:hover {
-    color: var(--fontColorTitle);
-}
-
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 15vh;
-    background-color: var(--backgroundColorFooter);
-    color: var(--fontColorFooter)
-}
-
-
-.img-logo{
-    width: 100px;
-    height: 100px;
-}
-
-#bem-vindo{
+/* ===============================
+   Estilos para textos específicos
+================================ */
+#bem-vindo {
     font-family: 'Italianno', serif;
-
 }
 
-#cardapio{
-    font-family: 'Yeseva One',serif;
-
+#cardapio {
+    font-family: 'Yeseva One', serif;
 }

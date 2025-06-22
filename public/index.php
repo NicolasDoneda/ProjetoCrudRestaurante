@@ -7,7 +7,7 @@
     <title>Home - Al Dente & Za’atar</title>
     <link rel="stylesheet" href="./assets/css/homeScreenStyle.css"/>
     <link rel="stylesheet" href="./assets/css/headerFooterStyle.css"/>
-    <link rel = "stylesheet" href = "./assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css"/>
 </head>
 
 <body>
@@ -40,16 +40,25 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="./assets/images/images-home/prato1.png" class="d-block w-100 img-fluid MaisPedidosCarrosel-prato-img" alt="Prato 1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <span>Spaghetti à Carbonara</span>
+                            </div>
                         </div>
                         <div class="carousel-item">
                             <img src="./assets/images/images-home/prato2.png" class="d-block w-100 img-fluid MaisPedidosCarrosel-prato-img" alt="Prato 2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <span>Risoto de Cogumelos</span>
+                            </div>
                         </div>
                         <div class="carousel-item">
                             <img src="./assets/images/images-home/prato3.png" class="d-block w-100 img-fluid MaisPedidosCarrosel-prato-img" alt="Prato 3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <span>Cordeiro com Za’atar</span>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Controles -->
+                    <!-- CONTROLES -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#MaisPedidosCarrosel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                     </button>

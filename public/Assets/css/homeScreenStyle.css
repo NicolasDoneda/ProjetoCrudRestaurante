@@ -1,183 +1,209 @@
-/* Arquivo de estilo CSS para Home Screen */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: var(--backgroundColorHome);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 :root {
-    /* Cores principais */
-    --backgroundColorHome: #E3DBCC;
+  /* Cores principais */
+  --backgroundColorHome: #E3DBCC;
 
-    /* Cores de fonte */
-    --fontColorPrincipalHome: #FFB549;
-    --fontColorSecundariaHome: #3A6B35;
-    --fontColorTerciariaHome: #892232;
-    --fontColorParagrafoHome: #ffffff;
+  /* Cores de fonte */
+  --fontColorPrincipalHome: #FFB549;
+  --fontColorSecundariaHome: #3A6B35;
+  --fontColorTerciariaHome: #892232;
+  --fontColorParagrafoHome: #ffffff;
 
-    /* Tipografia */
-    --fontFamily: 'Cormorant Upright', serif;
+  /* Tipografia */
+  --fontFamily: 'Cormorant Upright', serif;
 
-    /* Tamanhos de fonte */
-    --fontSizeXl: 1.5rem;
-    --fontSizeXxl: 2rem;
-    --fontSizeTitle: 2.5rem;
+  /* Tamanhos de fonte */
+  --fontSizeXl: 1.5rem;
+  --fontSizeXxl: 2rem;
+  --fontSizeTitle: 2.5rem;
 
-    /* Altura de linha */
-    --lineHeightMd: 1.5;
+  /* Altura de linha */
+  --lineHeightMd: 1.5;
+}
+
+body {
+  background-color: var(--backgroundColorHome);
 }
 
 /* ===============================
    BANNER DA HOME
 ================================ */
+
 .banner-principal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50vh;
-    background-image: url('../images/images-home/banner.gif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  background-image: url('../images/images-home/banner.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 .banner-principal::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(0.5px);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(0.5px);
+  z-index: 0;
 }
 
 .banner-principal * {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .titulo-primario-home {
-    font-family: var(--fontFamily);
-    color: var(--fontColorPrincipalHome);
-    font-size: var(--fontSizeTitle);
+  font-family: var(--fontFamily);
+  color: var(--fontColorPrincipalHome);
+  font-size: var(--fontSizeTitle);
 }
 
 .titulo-secundario-home {
-    font-family: var(--fontFamily);
-    color: var(--fontColorSecundariaHome);
-    font-size: var(--fontSizeXxl);
-    margin-bottom: 0.3em;
+  font-family: var(--fontFamily);
+  color: var(--fontColorSecundariaHome);
+  font-size: var(--fontSizeXxl);
+  margin-bottom: 0.3em;
 }
 
 .titulo-terciario-home {
-    font-family: var(--fontFamily);
-    color: var(--fontColorSecundariaHome);
-    font-size: var(--fontSizeXl);
-    margin-bottom: 0.5em;
+  font-family: var(--fontFamily);
+  color: var(--fontColorSecundariaHome);
+  font-size: var(--fontSizeXl);
+  margin-bottom: 0.5em;
 }
 
 .banner-principal p {
-    font-family: var(--fontFamily);
-    color: var(--fontColorParagrafoHome);
-    font-size: var(--fontSizeXl);
-    white-space: normal;
-    text-align: center;
-    line-height: var(--lineHeightMd);
+  font-family: var(--fontFamily);
+  color: var(--fontColorParagrafoHome);
+  font-size: var(--fontSizeXl);
+  white-space: normal;
+  text-align: center;
+  line-height: var(--lineHeightMd);
+}
+
+.carousel-caption {
+  bottom: 20px;
+}
+
+.carousel-caption span {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: none;
+  display: inline-block;
 }
 
 /* ===============================
    SEÇÃO MAIS PEDIDOS
 ================================ */
+
 .secao-mais-pedidos {
-    font-family: var(--fontFamily);
-    width: 100%;
-    min-height: 45vh;
-    background-color: var(--backgroundColorHome);
-    display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    margin-bottom: 1.5rem;
-    padding: 2rem;
+  font-family: var(--fontFamily);
+  width: 100%;
+  background-color: var(--backgroundColorHome);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
 }
 
 .titulo-principal-home {
-    color: var(--fontColorTerciariaHome);
-    font-size: var(--fontSizeTitle);
-    text-align: center;
-    margin-bottom: 1rem;
-    max-width: 900px;
+  color: var(--fontColorTerciariaHome);
+  font-size: var(--fontSizeTitle);
+  text-align: center;
+  margin-bottom: 1rem;
+  max-width: 900px;
 }
 
 .MaisPedidosCarrosel-container {
-    width: 100%;
-    max-width: 900px;
+  width: 100%;
+  max-width: 900px;
 }
+
 /* ===============================
- RESPONSIVIDADE
+   RESPONSIVIDADE
 ================================ */
 
 @media (max-width: 900px) {
-    .banner-principal {
-        height: 60vh;
-    }
+  .banner-principal {
+    height: 60vh;
+  }
 
-    .titulo-primario-home { font-size: 2rem; }
-    .titulo-secundario-home { font-size: 1.5rem; }
-    .titulo-terciario-home,
-    .banner-principal p { font-size: 1rem; }
+  .titulo-primario-home {
+    font-size: 2rem;
+  }
 
-    .secao-mais-pedidos {
-        padding: 1.5rem 1rem;
-    }
+  .titulo-secundario-home {
+    font-size: 1.5rem;
+  }
 
-    .titulo-principal-home {
-        font-size: 1.8rem;
-    }
+  .titulo-terciario-home,
+  .banner-principal p {
+    font-size: 1rem;
+  }
 
-    .MaisPedidosCarrosel-container {
-        max-width: 95%;
-        margin-bottom: 1.5rem;
-    }
+  .secao-mais-pedidos {
+    padding: 1.5rem 1rem;
+  }
+
+  .titulo-principal-home {
+    font-size: 1.8rem;
+  }
+
+  .MaisPedidosCarrosel-container {
+    max-width: 95%;
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (max-width: 600px) {
-    .banner-principal {
-        height: 70vh;
-    }
+  .banner-principal {
+    height: 70vh;
+  }
 
-    .titulo-primario-home { font-size: 1.6rem; }
-    .titulo-secundario-home { font-size: 1.3rem; }
-    .titulo-terciario-home,
-    .banner-principal p { font-size: 0.9rem; }
+  .titulo-primario-home {
+    font-size: 1.6rem;
+  }
 
-    .secao-mais-pedidos {
-        padding: 1rem 0.5rem;
-    }
+  .titulo-secundario-home {
+    font-size: 1.3rem;
+  }
 
-    .titulo-principal-home {
-        font-size: 1.4rem;
-    }
+  .titulo-terciario-home,
+  .banner-principal p {
+    font-size: 0.9rem;
+  }
 
-    .MaisPedidosCarrosel-container {
-        max-width: 100%;
-        border-radius: 15px;
-    }
+  .secao-mais-pedidos {
+    padding: 1rem 0.5rem;
+  }
+
+  .titulo-principal-home {
+    font-size: 1.4rem;
+  }
 }
