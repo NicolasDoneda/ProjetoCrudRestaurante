@@ -1,6 +1,7 @@
 <?php
+//
 require_once(__DIR__ . '/../../src/crud/conexao.php');
-require_once(__DIR__ . '/../../src/crud/verifica.php');
+
 
 $mensagem_sucesso = '';
 if (isset($_SESSION['mensagem_sucesso'])) {

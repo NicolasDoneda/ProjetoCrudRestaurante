@@ -1,157 +1,255 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 :root {
     /* Cores */
-    --backgroundColorAdmin: #f5f5f5;
-    --cardBackground: #fff;
-    --borderColorAdmin: #CD7F32;
-    --textColorAdmin: #5a2a27;
-    --textColorDesc: #333;
-    --linkColor: #B41C32;
-    --linkHoverColor: #892232;
-    --boxShadowCard: 0 4px 10px rgba(0,0,0,0.1);
+    --backgroundColorPedidos: #E3DBCC;
+    --borderColorPedidos: #CD7F32;
+    --backgroundButtonPedidos: #5e061b;
+    --colorTextBemVindo: #3A6B35;
+    --colorCardTitle: #B41C32;
+    --colorCardDesc: #000000;
+    --colorFiltroSelectBg: #fff8ed;
+    --colorFiltroSelectBorderHover: #a95f28;
 
     /* Fontes */
-    --fontFamilyInter: 'Inter', sans-serif;
     --fontFamilyYesevaOne: 'Yeseva One', serif;
     --fontFamilyLora: 'Lora', serif;
+    --fontFamilyItalianno: 'Italianno', cursive;
+    --fontFamilyInter: 'Inter', sans-serif;
 
     /* Tamanhos de fonte */
+    --fontSizeXl: 1.5rem;
+    --fontSizeXxl: 2rem;
     --fontSizeTitle: 2.5rem;
-    --fontSizeCardTitle: 1.8rem;
-    --fontSizeDesc: 1rem;
-    --fontSizePreco: 1.2rem;
-    --fontSizeLink: 1rem;
+    --fontSizeCardTitle: 1.8vw;
+    --fontSizeCardDesc: 0.9vw;
+    --fontSizePrecoCard: 1.3vw;
+    --fontSizeBemVindo: 2.2vw;
+    --fontSizeCardapio: 3vw;
+    --fontSizeFiltroSelect: 1rem;
 
-    /* Espaçamentos */
-    --paddingCard: 1.5rem 2rem;
-    --marginCardBottom: 2rem;
-    --borderRadiusCard: 0.75rem;
-    --gapLinks: 1.5rem;
+    /* Espaçamentos e medidas */
+    --borderRadiusBandeiraVerde: 1vw 0 0 1vw;
+    --borderRadiusBandeiraVermelho: 0 1vw 1vw 0;
+    --borderRadiusArabia: 1vw;
+    --paddingFiltroSelect: 0.6rem 1.2rem;
+    --borderFiltroSelect: 2px;
+    --borderRadiusFiltroSelect: 8px;
+    --boxShadowFiltroSelect: 0 2px 5px rgba(0, 0, 0, 0.05);
 
-    /* Imagens */
-    --imgWidth: 200px;
-    --imgBorderRadius: 0.5rem;
+    --widthBandeiraCorVerde: 4vw;
+    --heightBandeiraCorVerde: 0.35vw;
+    --widthBandeiraCorBranco: 4vw;
+    --heightBandeiraCorBranco: 0.35vw;
+    --widthBandeiraCorVermelho: 4vw;
+    --heightBandeiraCorVermelho: 0.35vw;
+    --widthArabia: 12vw;
+    --heightArabia: 0.35vw;
+    --marginTopArabia: 0.2vw;
+
+    --widthImgEspada: 1.5vw;
+    --heightImgEspada: 1.5vw;
+
+    --widthCardPratos: 20vw;
+    --heightCardPratos: 30vw;
+    --paddingBottomCardPratos: 1vw;
+    --boxShadowCardPratos: -0.3125vw 0.3125vw 0.78125vw rgba(0, 0, 0, 0.35);
+
+    --marginTopContainerImg: 1.5vw;
+    --widthImgPratos: 17vw;
+    --heightImgPratos: 8.908vw;
+
+    --widthLineImg: 17vw;
+    --heightLineImg: 0.01vw;
+    --backgroundLineImg: #000000;
+
+    --maxWidthContainerCard: 80vw;
+    --columnGapContainerCard: 10vw;
+    --rowGapContainerCard: 5vw;
+    --marginContainerCard: 1.5vw auto;
 }
-main {
-    flex: 1;
-  }
-  
+
 body {
-    background-color: var(--backgroundColorAdmin);
-    font-family: var(--fontFamilyInter);
-    color: var(--textColorAdmin);
-    margin: 2rem auto;
-    max-width: 900px;
-    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--backgroundColorPedidos);
+    font-family: var(--fontFamilyYesevaOne);
+    margin: 0;
+    padding: 0;
 }
 
-/* Título principal */
-h1 {
-    font-family: var(--fontFamilyYesevaOne);
-    font-size: var(--fontSizeTitle);
+/* Bandeira da Itália */
+#cont-bandeira {
+    display: flex;
+    flex-direction: row;
+}
+
+#verde {
+    background-color: #3A6B35;
+    width: var(--widthBandeiraCorVerde);
+    height: var(--heightBandeiraCorVerde);
+    border-radius: var(--borderRadiusBandeiraVerde);
+}
+
+#branco {
+    background-color: #ffff;
+    width: var(--widthBandeiraCorBranco);
+    height: var(--heightBandeiraCorBranco);
+}
+
+#vermelho {
+    background-color: #B22222;
+    width: var(--widthBandeiraCorVermelho);
+    height: var(--heightBandeiraCorVermelho);
+    border-radius: var(--borderRadiusBandeiraVermelho);
+}
+
+/* Bandeira Arábia */
+#arabia {
+    background-color: #085936;
+    width: var(--widthArabia);
+    height: var(--heightArabia);
+    border-radius: var(--borderRadiusArabia);
+    margin-top: var(--marginTopArabia);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#img-espada {
+    width: var(--widthImgEspada);
+    height: var(--heightImgEspada);
+}
+
+.card-pratos {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--widthCardPratos);
+    height: var(--heightCardPratos);
+    padding-bottom: var(--paddingBottomCardPratos);
+    box-shadow: var(--boxShadowCardPratos);
+    overflow: hidden;
+    border-radius: 1vw;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
-/* Links no topo */
-a {
-    font-weight: 600;
-    font-size: var(--fontSizeLink);
-    color: var(--linkColor);
-    text-decoration: none;
-    margin-right: var(--gapLinks);
-    transition: color 0.3s ease;
+.container-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--marginTopContainerImg);
 }
 
-a:last-child {
-    margin-right: 0;
+.img-pratos {
+    width: var(--widthImgPratos);
+    height: var(--heightImgPratos);
+    object-fit: cover;
+    border-radius: 0.5vw;
 }
 
-a:hover {
-    color: var(--linkHoverColor);
-    text-decoration: underline;
+#line-img {
+    display: flex;
+    width: var(--widthLineImg);
+    height: var(--heightLineImg);
+    background-color: var(--backgroundLineImg);
+    justify-self: center;
+    margin: 0.5vw 0;
 }
 
-/* Container do prato */
-div {
-    background-color: var(--cardBackground);
-    box-shadow: var(--boxShadowCard);
-    padding: var(--paddingCard);
-    border-radius: var(--borderRadiusCard);
-    margin-bottom: var(--marginCardBottom);
-}
-
-/* Título do prato */
-div > h3 {
+#card-tittle {
+    color: var(--colorCardTitle);
     font-family: var(--fontFamilyYesevaOne);
+    text-align: center;
     font-size: var(--fontSizeCardTitle);
-    margin-bottom: 0.5rem;
-    color: var(--textColorAdmin);
+    line-height: 2rem;
+    margin-top: 1vw;
 }
 
-/* Descrição */
-p {
+#card-desc {
     font-family: var(--fontFamilyLora);
-    font-size: var(--fontSizeDesc);
-    color: var(--textColorDesc);
-    margin: 0.3rem 0;
+    font-size: var(--fontSizeCardDesc);
+    text-align: justify;
+    flex-grow: 1;
+    overflow: hidden;
+    word-wrap: break-word;
+    max-width: 100%;
+    color: var(--colorCardDesc);
 }
 
-/* Preço */
-p strong {
-    font-weight: 700;
+#container-text-card {
+    flex-grow: 1;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-p:last-of-type {
-    font-size: var(--fontSizePreco);
-    font-weight: 700;
-    color: var(--linkColor);
+#container-card {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: var(--maxWidthContainerCard);
+    column-gap: var(--columnGapContainerCard);
+    row-gap: var(--rowGapContainerCard);
+    margin: var(--marginContainerCard);
+    justify-content: center;
 }
 
-/* Imagem do prato */
-/* Imagem dos pratos apenas */
-.img-prato {
-    display: block;
-    width: var(--imgWidth);
-    height: auto;
-    margin: 1rem 0;
-    border-radius: var(--imgBorderRadius);
-    border: 1px solid var(--borderColorAdmin);
+#preco-card {
+    font-size: var(--fontSizePrecoCard);
+    color: var(--backgroundButtonPedidos);
+    font-weight: bold;
+    margin-top: 0.5vw;
 }
 
-
-/* Links editar/deletar */
-div > a {
-    font-size: var(--fontSizeLink);
-    color: var(--linkColor);
-    font-weight: 600;
-    margin-right: 1.5rem;
+#bem-vindo {
+    font-size: var(--fontSizeBemVindo);
+    font-family: var(--fontFamilyItalianno);
+    line-height: 0.1vw;
+    margin: 3vw 0 0 0;
+    color: var(--colorTextBemVindo);
 }
 
-div > a:hover {
-    color: var(--linkHoverColor);
-    text-decoration: underline;
+#cardapio {
+    font-family: var(--fontFamilyYesevaOne);
+    font-size: var(--fontSizeCardapio);
+    line-height: 3.5vw;
+    color: #892232;
 }
 
-/* Linha separadora */
-hr {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 1.5rem 0;
+/* Filtro */
+.filtro-categorias {
+    margin-top: 2rem;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-    body {
-        margin: 1rem;
-        padding: 0 0.5rem;
-    }
+.filtro-form {
+    gap: 1rem;
+}
 
-    img {
-        width: 100%;
-        max-width: 100%;
-    }
+.filtro-select {
+    background-color: var(--colorFiltroSelectBg);
+    color: var(--backgroundButtonPedidos);
+    border: var(--borderFiltroSelect) solid var(--borderColorPedidos);
+    font-family: var(--fontFamilyYesevaOne);
+    font-size: var(--fontSizeFiltroSelect);
+    padding: var(--paddingFiltroSelect);
+    border-radius: var(--borderRadiusFiltroSelect);
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: var(--boxShadowFiltroSelect);
+    min-width: 220px;
+}
+
+.filtro-select:hover,
+.filtro-select:focus {
+    border-color: var(--colorFiltroSelectBorderHover);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(205, 127, 50, 0.3);
 }
