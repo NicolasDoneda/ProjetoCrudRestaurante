@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
+<center>
 <form method="POST" action="create.php" enctype="multipart/form-data">
     <label>Nome do prato:</label><br>
     <input type="text" name="nome" required><br><br>
@@ -62,3 +62,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <button type="submit">Cadastrar prato</button>
 </form>
+</center>
