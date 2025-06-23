@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+body{
+    background-color: #E3DBCC;
+}
+:root {
+    /* Cores */
+    --backgroundColorAdmin: #f5f5f5;
+    --cardBackground: #fff;
+    --borderColorAdmin: #CD7F32;
+    --textColorAdmin: #673c11;
+    --textColorDesc: #333;
+    --linkColor: #B41C32;
+    --linkHoverColor: #892232;
+    --boxShadowCard: 0 4px 10px rgba(0,0,0,0.1);
+
+    /* Fontes */
+    --fontFamilyInter: 'Inter', sans-serif;
+    --fontFamilyYesevaOne: 'Yeseva One', serif;
+    --fontFamilyLora: 'Lora', serif;
+
+    /* Tamanhos de fonte */
+    --fontSizeTitle: 2.5rem;
+    --fontSizeCardTitle: 1.8rem;
+    --fontSizeDesc: 1rem;
+    --fontSizePreco: 1.2rem;
+    --fontSizeLink: 1rem;
+
+    /* Espaçamentos */
+    --paddingCard: 1.5rem 2rem;
+    --marginCardBottom: 2rem;
+    --borderRadiusCard: 0.75rem;
+    --gapLinks: 1.5rem;
+
+    /* Imagens */
+    --imgWidth: 200px;
+    --imgBorderRadius: 0.5rem;
+}
+
+.container-main {
+    flex: 1;
+    background-color: var(--backgroundColorAdmin);
+    font-family: var(--fontFamilyInter);
+    color: var(--textColorAdmin);
+    margin: 2rem auto;
+    max-width: 900px;
+    padding: 0 1rem;
+}
+
+.titulo-principal {
+    font-family: var(--fontFamilyYesevaOne);
+    font-size: var(--fontSizeTitle);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Links no topo */
+.link-topo {
+    font-weight: 600;
+    font-size: var(--fontSizeLink);
+    color: var(--linkColor);
+    text-decoration: none;
+    margin-right: var(--gapLinks);
+    transition: color 0.3s ease;
+}
+
+.link-topo:last-child {
+    margin-right: 0;
+}
+
+.link-topo:hover {
+    color: var(--linkHoverColor);
+    text-decoration: underline;
+}
+
+.card-prato {
+    background-color: var(--cardBackground);
+    box-shadow: var(--boxShadowCard);
+    padding: var(--paddingCard);
+    border-radius: var(--borderRadiusCard);
+    margin-bottom: var(--marginCardBottom);
+}
+
+.titulo-prato {
+    font-family: var(--fontFamilyYesevaOne);
+    font-size: var(--fontSizeCardTitle);
+    margin-bottom: 0.5rem;
+    color: var(--textColorAdmin);
+}
+
+.descricao-prato {
+    font-family: var(--fontFamilyLora);
+    font-size: var(--fontSizeDesc);
+    color: var(--textColorDesc);
+    margin: 0.3rem ;
+}
+
+.texto-negrito {
+    font-weight: 700;
+    color: var(--linkColor);
+    font-size: var(--fontSizePreco);
+}
+
+.img-prato {
+    display: block;
+    width: var(--imgWidth);
+    height: auto;
+    margin: 1rem 0;
+    border-radius: var(--imgBorderRadius);
+    border: 1px solid var(--borderColorAdmin);
+}
+
+.links-editar-deletar > a {
+    font-size: var(--fontSizeLink);
+    color: var(--linkColor);
+    font-weight: 600;
+    margin-right: 1.5rem;
+}
+
+.links-editar-deletar > a:hover {
+    color: var(--linkHoverColor);
+    text-decoration: underline;
+}
+
+.linha-separadora {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1.5rem 0;
+}
+
+/* ===============================
+  RESPONSIVIDADE
+================================ */
+
+@media (max-width: 900px) {
+    .container-main {
+        max-width: 100%;
+        margin: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .img-prato {
+        width: 150px;
+    }
+    
+    .titulo-principal {
+        font-size: 2rem;
+    }
+    
+    .card-prato {
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container-main {
+        margin: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .img-prato {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .titulo-principal {
+        font-size: 1.5rem;
+    }
+    
+    .card-prato {
+        padding: 1rem;
+    }
+    
+    .link-topo {
+        font-size: 0.9rem;
+        margin-right: 1rem;
+    }
+}

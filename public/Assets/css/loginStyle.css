@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--fontFamilyYesevaOne);
+    color: var(--fontColor);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+:root {
+  /* Cores */
+  --fontColor: #CD7F32;
+  --borderColor: #CD7F32;
+  --backgroundCardLogin: #5B1D1D;
+  --backgroundInputFocus: #4A1616;
+  --colorInputFocus: #FFD700;
+  --backgroundBalao: #ffffff;
+  --erroLoginColor: #CD7F34;
+
+  /* Fontes */
+  --fontFamilyYesevaOne: 'Yeseva One', serif;
+  --fontFamilyLora: 'Lora', serif;
+  --fontFamilyCinzelDecorative: 'Cinzel Decorative', serif;
+
+  /* Tamanhos fonte */
+  --fontSizeH1: 3.3vw;
+  --fontSizeInput: 1.3vw;
+  --fontSizePlaceholder: 1.1vw;
+  --fontSizeButton: 1.7vw;
+  --fontSizeCirculoText: 3.6vw;
+  --fontSizeBalao: 2vw;
+  --fontSizeRegistroUsuario: 1.2rem;
+  --fontSizeErroLogin: 0.9rem;
+
+  /* Bordas */
+  --borderRadiusCard: 2.2vw;
+  --borderRadiusInput: 0.3vw;
+  --borderRadiusButton: 0.6vw;
+  --borderRadiusCirculo: 50%;
+  --borderRadiusBalao: 1vw;
+
+  /* Medidas gerais */
+  --containerCardLoginWidth: 45%;
+  --containerCardLoginPadding: 2vw 1vw;
+  --inputHeight: 2.2vw;
+  --buttonWidth: 12vw;
+  --buttonHeight: 3vw;
+  --circuloSize: 11vw;
+  --circuloBorderWidth: 2px;
+
+  /* Espaçamentos */
+  --marginBottomH1: 1vw;
+  --marginBottomCirculoText: 1vw;
+  --marginTopBalao: 0.8vw;
+  --marginBottomBalao: 1vw;
+  --marginInputSelect: 1vw auto;
+  --marginBottomErroLogin: 1rem;
+
+  /* Outros */
+  --balaoBoxShadow: 0 0 5px rgba(0,0,0,0.3);
+  --balaoAfterBorderWidth: 0.8vw;
+  --balaoAfterBorderColor: var(--backgroundBalao) transparent transparent transparent;
+}
+
+/* ===============================
+   CONTAINER PRINCIPAL
+================================ */
+#secao-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/images-login-register/fundo-login-register.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+#secao-content::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.div-content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 42vw;
+    border: 0.5vw solid var(--borderColor);
+    border-radius: var(--borderRadiusCard);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+/* ===============================
+   CARD DE LOGIN
+================================ */
+.container-card-login {
+    background-color: var(--backgroundCardLogin);
+    width: var(--containerCardLoginWidth);
+    height: 100%;
+    margin-top: 0.1vw;
+    border-style: solid;
+    border-color: var(--borderColor);
+    border-top-width: 0.1vw;
+    border-right-width: 0.5vw;
+    border-bottom-width: 0.6vw;
+    border-left-width: 0.1vw;
+    border-top-left-radius: 1.5vw;
+    border-bottom-left-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--containerCardLoginPadding);
+    position: relative;
+    z-index: 2;
+}
+
+.container-card-login h1 {
+    color: var(--fontColor);
+    font-size: var(--fontSizeH1);
+    margin-bottom: var(--marginBottomH1);
+    font-family: var(--fontFamilyYesevaOne);
+}
+
+.container-card-login form {
+    width: 100%;
+}
+
+/* ===============================
+   FORMULÁRIOS (INPUTS E SELECT)
+================================ */
+input,
+select {
+    display: block;
+    margin: var(--marginInputSelect);
+    width: 100%;
+    max-width: 25vw;
+    height: var(--inputHeight);
+    background-color: var(--backgroundCardLogin);
+    border: 1.5px solid var(--borderColor);
+    padding-left: 0.5vw;
+    color: var(--fontColor);
+    font-size: var(--fontSizeInput);
+    font-family: var(--fontFamilyYesevaOne);
+    border-radius: var(--borderRadiusInput);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input::placeholder,
+select::placeholder {
+    color: var(--fontColor);
+    font-family: var(--fontFamilyYesevaOne);
+    font-size: var(--fontSizePlaceholder);
+}
+
+input:focus,
+select:focus {
+    background-color: var(--backgroundInputFocus);
+    color: var(--colorInputFocus);
+    outline: none;
+}
+
+input:focus::placeholder,
+select:focus::placeholder {
+    color: transparent;
+}
+
+/* ===============================
+   BOTÕES
+================================ */
+button {
+    width: var(--buttonWidth);
+    height: var(--buttonHeight);
+    margin: 0 auto 1vw;
+    display: block;
+    background-color: var(--fontColor);
+    border: none;
+    font-family: var(--fontFamilyYesevaOne);
+    color: var(--backgroundCardLogin);
+    font-size: var(--fontSizeButton);
+    border-radius: var(--borderRadiusButton);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b16f1d;
+}
+
+/* ===============================
+   ELEMENTOS CÍRCULO E TEXTOS
+================================ */
+.circulo {
+    width: var(--circuloSize);
+    height: var(--circuloSize);
+    margin: 0 auto var(--marginBottomCirculoText) auto;
+    border-radius: var(--borderRadiusCirculo);
+    border: var(--circuloBorderWidth) solid var(--borderColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#AL,
+#EZA {
+    font-family: var(--fontFamilyCinzelDecorative);
+    font-size: var(--fontSizeCirculoText);
+    color: var(--fontColor);
+    margin: 0 0.5vw var(--marginBottomCirculoText) 0;
+    line-height: 3.3vw;
+}
+
+#EZA {
+    margin-bottom: var(--marginBottomCirculoText);
+}
+
+/* ===============================
+   BALÃO DE TEXTO
+================================ */
+.balao {
+    position: absolute;
+    bottom: 19vw;
+    left: 66vw;
+    transform: translateX(-50%);
+    background: var(--backgroundBalao);
+    color: var(--fontColor);
+    padding: var(--marginTopBalao) 1.2vw;
+    border-radius: var(--borderRadiusBalao);
+    font-family: var(--fontFamilyLora);
+    font-size: var(--fontSizeBalao);
+    max-width: 12vw;
+    text-align: center;
+    box-shadow: var(--balaoBoxShadow);
+    z-index: 2;
+}
+
+.balao::after {
+    content: "";
+    position: absolute;
+    bottom: -1.4vw;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: var(--balaoAfterBorderWidth);
+    border-style: solid;
+    border-color: var(--balaoAfterBorderColor);
+}
+
+/* ===============================
+    TEXTO
+================================ */
+.registro-usuario {
+    font-size: var(--fontSizeRegistroUsuario);
+    color: var(--fontColor);
+    font-weight: bold;
+}
+
+.erro-login {
+    color: var(--erroLoginColor);
+    margin-bottom: var(--marginBottomErroLogin);
+    font-weight: bold;
+    font-size: var(--fontSizeErroLogin);
+}
+
+/* ===============================
+   IMAGEM
+================================ */
+#secao-content img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30vw;
+    height: 30vw;
+    pointer-events: none;
+    z-index: 1;
+    object-fit: contain;
+}
+
+/* ===============================
+   RESPONSIVIDADE
+================================ */
+@media (max-width: 900px) {
+    .div-content {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+        border-width: 2px;
+        border-radius: 1.5rem;
+        padding: 1rem;
+    }
+
+    .container-card-login {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        border-width: 2px;
+        padding: 1rem;
+    }
+
+    input,
+    select {
+        max-width: 100%;
+        width: 100%;
+        font-size: 1rem;
+        height: 2.8rem;
+    }
+  
+    input::placeholder,
+    select::placeholder {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.2rem;
+        height: 3.2rem;
+        border-radius: 0.8rem;
+    }
+
+    .container-card-login h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .circulo {
+        width: 8rem;
+        height: 8rem;
+        margin: 0 auto 1rem;
+    }
+
+    #AL,
+    #EZA {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .balao {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        max-width: 90%;
+        font-size: 1rem;
+        margin: 1rem auto 0;
+        padding: 0.8rem 1rem;
+    }
+
+    .balao::after {
+        display: none;
+    }
+
+    #secao-content img {
+        position: relative;
+        width: 60vw;
+        height: auto;
+        margin: 1rem auto 0;
+    }
+
+    
+}
+
+@media (max-width: 600px) {
+    .div-content {
+        width: 100%;
+        padding: 0.5rem;
+        border-width: 1.5px;
+    }
+
+    .container-card-login {
+        padding: 0.5rem;
+        border-radius: 0.8rem;
+        border-width: 1.5px;
+    }
+
+    input,
+    select {
+        font-size: 0.9rem;
+        height: 2.4rem;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    input::placeholder,
+    select::placeholder {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 1rem;
+        height: 2.8rem;
+        border-radius: 0.6rem;
+        width: 100%;
+    }
+
+    .container-card-login h1 {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .circulo {
+        width: 6rem;
+        height: 6rem;
+        margin-bottom: 0.75rem;
+    }
+
+    #AL,
+    #EZA {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .balao {
+        max-width: 95%;
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+        margin: 0.75rem auto 0;
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+    }
+
+    .balao::after {
+        display: none;
+    }
+
+    #secao-content img {
+        width: 80vw;
+        height: auto;
+        margin: 1rem auto 0;
+        position: relative;
+    }
+}

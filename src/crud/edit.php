@@ -9,6 +9,7 @@ if (!isset($_GET['id'])) {
 
 $id = $_GET['id'];
 
+// Busca o prato
 $sql = "SELECT * FROM pratos WHERE id = :id";
 $stmt = $pdo->prepare($sql);
 $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -20,10 +21,17 @@ if (!$prato) {
     exit;
 }
 
+// Busca categorias
+$sqlCategorias = "SELECT * FROM categoria";
+$stmtCategorias = $pdo->prepare($sqlCategorias);
+$stmtCategorias->execute();
+$categorias = $stmtCategorias->fetchAll();
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
     $preco = $_POST['preco'];
+    $id_categoria = $_POST['id_categoria'];
 
     // Verifica se uma nova imagem foi enviada
     if (!empty($_FILES['imagem']['name'])) {
@@ -41,12 +49,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Atualizar no banco
-    $sql = "UPDATE pratos SET nome = :nome, descricao = :descricao, preco = :preco, imagem = :imagem WHERE id = :id";
+    $sql = "UPDATE pratos 
+            SET nome = :nome, descricao = :descricao, preco = :preco, imagem = :imagem, id_categoria = :id_categoria 
+            WHERE id = :id";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':nome', $nome);
     $stmt->bindParam(':descricao', $descricao);
     $stmt->bindParam(':preco', $preco);
     $stmt->bindParam(':imagem', $caminho_imagem);
+    $stmt->bindParam(':id_categoria', $id_categoria);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
     if ($stmt->execute()) {
@@ -56,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 ?>
-
+<center>
 <h1>Editar Prato</h1>
 <form method="POST" action="edit.php?id=<?= $prato['id'] ?>" enctype="multipart/form-data">
     <label>Nome do prato:</label><br>
@@ -71,5 +82,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <label>Imagem do prato:</label><br>
     <input type="file" name="imagem"><br><br>
 
+    <label>Categoria:</label><br>
+    <select name="id_categoria" required>
+        <option value="">Selecione a categoria</option>
+        <?php foreach ($categorias as $categoria): ?>
+            <option value="<?= $categoria['id'] ?>" <?= $categoria['id'] == $prato['id_categoria'] ? 'selected' : '' ?>>
+                <?= htmlspecialchars($categoria['nome']) ?>
+            </option>
+        <?php endforeach; ?>
+    </select><br><br>
+
     <button type="submit">Salvar alterações</button>
 </form>
+</center>

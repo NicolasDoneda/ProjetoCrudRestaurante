@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16/06/2025 às 19:19
+-- Tempo de geração: 23/06/2025 às 19:38
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -76,29 +76,19 @@ CREATE TABLE `pratos` (
 --
 
 INSERT INTO `pratos` (`id`, `nome`, `descricao`, `preco`, `id_categoria`, `imagem`) VALUES
-(1, 'Macarrao Gostoso', 'Macarrão cozido al dente, servido com um molho de tomate caseiro preparado com tomates frescos, alho, cebola e ervas aromáticas. Finalizado com um toque de azeite extra virgem e queijo parmesão ralado na hora, oferecendo uma combinação clássica e irresistível de sabores.', 99.00, NULL, '684c29be2bec4_imagem.png'),
-(2, 'Macarrao Gostoso', 'Macarrão artesanal feito com molho de tomate fresco e manjericão, finalizado com queijo parmesão ralado na hora.', 55.00, NULL, '684c2c489d914_imagem.png'),
-(3, 'Macarrao Gostoso', 'Macarrão cozido al dente, servido com um molho de tomate caseiro preparado com tomates frescos, alho, cebola e ervas aromáticas. Finalizado com um toque de azeite extra virgem e queijo parmesão ralado na hora, oferecendo uma combinação clássica e irresistível de sabores.\r\n\r\n', 55.00, NULL, '684c2cebad919_imagem.png'),
-(4, 'Nicolas', 'Macarrão cozido al dente, servido com um molho de tomate caseiro preparado com tomates frescos, alho, cebola e ervas aromáticas. Finalizado com um toque de azeite extra virgem e queijo parmesão ralado na hora, oferecendo uma combinação clássica e irresistível de sabores.\r\n\r\n', 55.00, NULL, '684c2cf3e9ba1_imagem.png'),
-(5, 'Nicolas', 'Macarrão cozido al dente, servido com um molho de tomate caseiro preparado com tomates frescos, alho, cebola e ervas aromáticas. Finalizado com um toque de azeite extra virgem e queijo parmesão ralado na hora, oferecendo uma combinação clássica e irresistível de sabores.\r\n\r\n', 55.00, NULL, '684c2f3dee3e7_imagem.png'),
-(6, 'Nicolas', 'Macarrão cozido al dente, servido com um molho de tomate caseiro preparado com tomates frescos, alho, cebola e ervas aromáticas. Finalizado com um toque de azeite extra virgem e queijo parmesão ralado na hora, oferecendo uma combinação clássica e irresistível de sabores.\r\n\r\n', 55.00, NULL, '684c37411b217_imagem.png'),
-(7, 'Nicolas', 'Macarrão cozido al dente, servido com um molho de tomate caseiro preparado com tomates frescos, alho, cebola e ervas aromáticas. Finalizado com um toque de azeite extra virgem e queijo parmesão ralado na hora, oferecendo uma combinação clássica e irresistível de sabores.\r\n\r\n', 55.00, NULL, '684c3c0adc2fa_imagem.png'),
-(8, 'Macarrao Gostoso', 'Macarrão cozido al dente, servido com um molho de tomate caseiro preparado com tomates frescos, alho, cebola e ervas aromáticas. Finalizado com um toque de azeite extra virgem e queijo parmesão ralado na hora, oferecendo uma combinação clássica e irresistível de sabores.\r\n\r\n', 55.00, NULL, '684c3d579ebd4_imagem.png'),
 (10, 'Arroz com cordeiro', 'Arroz cozido com pedaços de cordeiro, temperado com especiarias como canela, cardamomo e cravo.\r\n\r\n', 45.00, 4, '684c418ccd92a_arroz-cordeiro.webp'),
 (11, 'Falafel com de molho tahine', 'Bolinhos fritos de grão-de-bico, geralmente servidos como prato principal em algumas versões.', 35.00, 4, '684c41ca771a4_Falafel-Molho.jpg'),
 (12, 'Kafta', 'Carne moída temperada com especiarias, moldada em espetos ou bolinhos, pode ser grelhada ou assada.\r\n\r\n', 37.00, 4, '684c41f147c54_kafta.webp'),
 (13, 'Kebab', 'Espetos de carne (bovino, cordeiro, frango) temperada e grelhada.\r\n\r\n', 32.00, 4, '684c421fdec21_kebab.jpg'),
 (14, 'Lasagna', 'Camadas de massa, molho bolonhesa (carne e tomate), molho bechamel e queijo gratinado.\r\n\r\n', 35.00, 4, '684c424c7e2f1_lasanha.jpg'),
-(15, 'Musakhan ', 'Prato palestino com frango assado temperado com sumac e cebolas, servido sobre pão taboon.\r\n\r\n', 55.00, 4, '684c42b9ef2d7_musakhan.webp'),
 (16, 'Osso Buco', 'Tornozelo de vitela cozido lentamente em molho de tomate, vinho e ervas, geralmente servido com risotto ou polenta.\r\n\r\n', 67.00, 4, '684c42e69d66f_Osso Buco.jpg'),
 (17, 'Parmigiana di Melanzane', 'Berinjela à parmegiana com camadas de molho de tomate, queijo e manjericão, gratinada no forno.\r\n\r\n', 55.00, 4, '684c430948176_Parmigiana di Melanzane.avif'),
-(18, 'Risoto de Lagosta', 'Risoto de lagosta é um prato sofisticado da culinária italiana que combina o arroz arbóreo cremoso, cozido lentamente em caldo de frutos do mar, com pedaços suculentos de lagosta fresca. Geralmente é temperado com alho, cebola, vinho branco, manteiga e queijo parmesão, resultando em uma textura cremosa e sabor delicado, com o toque especial do sabor marcante da lagosta.', 115.00, 4, '684c43943e213_risoto-lagosta.jpg'),
+(18, 'Risoto de Lagosta', 'Risoto de lagosta é um prato sofisticado da culinária italiana que combina o arroz arbóreo cremoso, cozido lentamente em caldo de frutos do mar, com pedaços suculentos de lagosta fresca.', 115.00, 4, '684c43943e213_risoto-lagosta.jpg'),
 (19, 'Shawarma ', 'Carne assada em fatias finas (geralmente frango ou carne bovina), servida com arroz, pão pita e acompanhamentos.\r\n\r\n', 42.00, 4, '684c43d68eaa5_shawarma.webp'),
 (20, 'Spaghetti alla Carbonara', 'Massa spaghetti com molho feito de ovos, queijo pecorino, pancetta (bacon italiano) e pimenta-do-reino.', 50.00, 4, '684c43fa37749_Spaghetti alla Carbonara.webp'),
 (21, 'Tagliatelle al Ragù (Bolognese)', 'Massa fresca tipo tagliatelle servida com molho de carne moída, tomate, vinho e temperos.\r\n\r\n', 55.00, 4, '684c44f468118_Tagliatelle al Ragù (Bolognese).webp'),
-(22, 'Tagliatelle al Ragù (Bolognese)', 'Massa fresca tipo tagliatelle servida com molho de carne moída, tomate, vinho e temperos.\r\n\r\n', 55.00, 4, '684c66630be89_Tagliatelle al Ragù (Bolognese).webp'),
 (23, 'Atay', 'Chá verde com folhas frescas de hortelã, servido quente, muito refrescante e digestivo, tradicional no Magrebe e Oriente Médio.', 15.00, 3, '684c68b42fa56_atay.jpg'),
-(24, 'Belinni', 'Um clássico elegante de Veneza. Feito com prosecco (espumante italiano) e purê de pêssego branco fresco. De cor rosada ou alaranjada suave, textura levemente espumante e sabor doce e frutado. É servido em taça flute, com visual delicado e refinado — ótimo para brunch, jantares leves ou ocasiões especiais.', 32.00, 3, '684c68da927d6_bellini.jpg'),
+(24, 'Belinni', 'Um clássico elegante de Veneza. Feito com prosecco (espumante italiano) e purê de pêssego branco fresco. De cor rosada ou alaranjada suave, textura levemente espumante e sabor doce e frutado.', 32.00, 3, '684c68da927d6_bellini.jpg'),
 (25, 'Jallab', 'Bebida fria feita com xarope de tâmaras, água de rosas e melaço de uva, servida com gelo e pinoli. Doce, aromática e refrescante.', 16.00, 3, '684c68f77b5b8_jallab.jpg'),
 (26, 'Limonada com água de flor de laranjeira', 'Limonada fresca com um toque perfumado de água de flor de laranjeira, que dá um sabor delicado e aromático.', 17.00, 3, '684c696a520d3_Limonada com água de flor de laranjeira.webp'),
 (27, 'Negroni', 'Drink clássico com gin, Campari e vermute rosso. Forte, amargo e aromático, servido com gelo.', 39.00, 3, '684c6994bed9d_negroni.jpg'),
@@ -136,7 +126,7 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`, `tipo`) VALUES
 (30, 'Nicolas', 'nicolasdoneda231@gmail.com', '$2y$10$Wrp5Oo.Af0DFjkd3Z2nNxumyuHEzzYt0dac12tAbhPgC540Z0Iuby', 'admin'),
-(32, 'Carolina Nagibe', 'nicolasdoneda@gmail.com', '$2y$10$r44pF7BIg7C1sevGNk3GaOqk9HUNSpQxJlmta/lnLfolsvrKRlTrm', 'cliente');
+(49, 'Sabrina', 'sabrina@gmail.com', '$2y$10$4AmF.U.Y6XQCVNYkyTz6G.zBSuXS6ZFppKAT6D4YJGmcSFL2BfH2.', 'cliente');
 
 --
 -- Índices para tabelas despejadas
@@ -189,13 +179,13 @@ ALTER TABLE `pedido`
 -- AUTO_INCREMENT de tabela `pratos`
 --
 ALTER TABLE `pratos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- Restrições para tabelas despejadas
