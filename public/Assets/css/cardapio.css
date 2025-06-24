@@ -168,8 +168,7 @@ body {
     font-family: var(--fontFamilyYesevaOne);
     text-align: center;
     font-size: var(--fontSizeCardTitle);
-    line-height: 2rem;
-    margin-top: 1vw;
+    line-height: 1.5rem;
 }
 
 #card-desc {
@@ -177,8 +176,7 @@ body {
     font-size: var(--fontSizeCardDesc);
     text-align: justify;
     flex-grow: 1;
-    overflow: hidden;
-    word-wrap: break-word;
+    overflow:hidden;
     max-width: 100%;
     color: var(--colorCardDesc);
 }
@@ -252,4 +250,112 @@ body {
     border-color: var(--colorFiltroSelectBorderHover);
     outline: none;
     box-shadow: 0 0 0 3px rgba(205, 127, 50, 0.3);
+}
+@media (max-width: 900px) {
+    .card-pratos {
+        width: 35vw;
+        height: 45vw;
+    }
+
+    .img-pratos {
+        width: 30vw;
+        height: 16vw;
+    }
+
+    #card-tittle {
+        font-size: 4vw;
+    }
+
+    #card-desc {
+        font-size: 2vw;
+    }
+
+    #preco-card {
+        font-size: 3vw;
+    }
+
+    #bem-vindo {
+        font-size: 5vw;
+    }
+
+    #cardapio {
+        font-size: 6vw;
+    }
+
+    #container-card {
+        max-width: 95vw;
+        column-gap: 5vw;
+        row-gap: 3vw;
+        margin: 1rem auto;
+    }
+
+    .filtro-categorias {
+        padding-right: 1rem;
+        justify-content: center;
+    }
+
+    .filtro-select {
+        min-width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-pratos {
+        width: 80vw;
+        height: 90vw;
+    }
+
+    .img-pratos {
+        width: 75vw;
+        height: 40vw;
+    }
+
+    #card-tittle {
+        font-size: 5.5vw;
+    }
+
+    #card-desc {
+        font-size: 3.5vw;
+    }
+
+    #preco-card {
+        font-size: 4.5vw;
+    }
+
+    #bem-vindo {
+        font-size: 8vw;
+    }
+
+    #cardapio {
+        font-size: 10vw;
+    }
+
+    #verde, #branco, #vermelho {
+        width: 10vw;
+        height: 1vw;
+    }
+
+    #verde {
+        border-radius: 1vw 0 0 1vw;
+    }
+
+    #branco {
+        border-radius: 0;
+    }
+
+    #vermelho {
+        border-radius: 0 1vw 1vw 0;
+    }
+
+    #arabia {
+        width: 25vw;
+        height: 1vw;
+        margin-top: 1vw;
+    }
+
+    #img-espada {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
 }

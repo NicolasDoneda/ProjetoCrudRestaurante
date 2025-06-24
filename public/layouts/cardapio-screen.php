@@ -57,7 +57,7 @@ include(__DIR__ . '/../includes/header.php');
 <body>
 
     <?php if ($mensagem_sucesso): ?>
-        <div class="alert alert-success alert-dismissible fade show mt-3 mx-auto" role="alert" style="max-width: 800px;">
+        <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
             <?= htmlspecialchars($mensagem_sucesso) ?>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
