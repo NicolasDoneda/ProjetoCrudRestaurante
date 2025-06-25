@@ -48,8 +48,8 @@ $pratos = $stmt->fetchAll();
             return confirm("Tem certeza de que deseja excluir este prato?");
         }
     </script>
-    <link rel = "stylesheet" href = "../assets/css/adminStyle.css">
-    <link rel = "stylesheet" href = "../assets/css/headerFooterStyle.css">
+    <link rel = "stylesheet" href = "../Assets/css/adminStyle.css">
+    <link rel = "stylesheet" href = "../Assets/css/headerFooterStyle.css">
 </head>
 <body>
       <div class="filtro-categorias mt-4 d-flex justify-content-end w-100 pe-5">
@@ -75,7 +75,7 @@ $pratos = $stmt->fetchAll();
                 <h3 class="titulo-prato"><?php echo htmlspecialchars($prato['nome']); ?></h3>
                 <p class="descricao-prato"><strong class="texto-negrito">Descrição:</strong> <?php echo htmlspecialchars($prato['descricao']); ?></p>
                 <p class="descricao-prato"><strong class="texto-negrito">Preço:</strong> <?php echo htmlspecialchars($prato['preco']); ?></p>
-                <img src="/ProjetoCrudRestaurante/public/assets/php/exibir_imagem.php?img=<?= urlencode($prato['imagem']) ?>" alt="Imagem do prato" class="img-prato">
+                <img src="/ProjetoCrudRestaurante/public/Assets/php/exibir_imagem.php?img=<?= urlencode($prato['imagem']) ?>" alt="Imagem do prato" class="img-prato">
 
                 <div class="links-editar-deletar">
                     <a href="/ProjetoCrudRestaurante/src/crud/edit.php?id=<?php echo $prato['id']; ?>">Editar</a> |

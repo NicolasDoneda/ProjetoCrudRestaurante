@@ -17,9 +17,9 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
-  <meta charset="UTF-8">
-  <title>Sobre nós</title>
-  <link rel="stylesheet" href="../assets/css/sobrenos.css">
+    <meta charset="UTF-8">
+    <title>Sobre nós</title>
+    <link rel="stylesheet" href="../Assets/css/sobrenos.css">
 </head>
 <body>
     <header>

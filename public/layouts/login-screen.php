@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Login - Al Dente & Za’atar</title>
 
     <link rel="stylesheet" href="../../public/Assets/css/loginStyle.css" />
-    <link rel="stylesheet" href="../assets/css/headerFooterStyle.css" />
+    <link rel="stylesheet" href="../Assets/css/headerFooterStyle.css" />
 </head>
 
 <body>

@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Seu Pedido - Al Dente & Za’atar</title>
-    <link rel="stylesheet" href="../assets/css/pedidosStyle.css">
+    <link rel="stylesheet" href="../Assets/css/pedidosStyle.css">
 </head>
 
 <body>
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <?php $totalGeral += $total; ?>
 
                             <div class="item-carrinho">
-                                <img src="/ProjetoCrudRestaurante/public/assets/php/exibir_imagem.php?img=<?= urlencode($item['imagem']) ?>" alt="<?= htmlspecialchars($item['nome']) ?>">
+                                <img src="/ProjetoCrudRestaurante/public/Assets/php/exibir_imagem.php?img=<?= urlencode($item['imagem']) ?>" alt="<?= htmlspecialchars($item['nome']) ?>">
                                 <div class="info-prato">
                                     <h3 class="nome-prato"><?= htmlspecialchars($item['nome']) ?></h3>
                                     <div class="controle-quantidade">

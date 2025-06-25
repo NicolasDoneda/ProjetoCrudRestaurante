@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Registro - Al Dente & Za’atar</title>
-    <link rel="stylesheet" href="../assets/css/headerFooterStyle.css" />
+    <link rel="stylesheet" href="../Assets/css/headerFooterStyle.css" />
     <link rel="stylesheet" href="../Assets/css/registerStyle.css" />
 </head>
 

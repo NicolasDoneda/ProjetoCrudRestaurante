@@ -8,7 +8,6 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 
 require_once(__DIR__ . '/../../src/crud/conexao.php');
 
-
 $mensagem_sucesso = '';
 if (isset($_SESSION['mensagem_sucesso'])) {
     $mensagem_sucesso = $_SESSION['mensagem_sucesso'];
@@ -56,14 +55,17 @@ include(__DIR__ . '/../includes/header.php');
 
 <body>
 
-    <?php if ($mensagem_sucesso): ?>
-        <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
-            <?= htmlspecialchars($mensagem_sucesso) ?>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    <?php endif; ?>
-
     <main>
+        <!-- Mensagem de sucesso -->
+        <?php if ($mensagem_sucesso): ?>
+            <div class="container mt-3">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?= htmlspecialchars($mensagem_sucesso) ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        <?php endif; ?>
+
         <div class="d-flex align-items-center flex-column mt-3">
             <p id="bem-vindo">Confira Nosso</p>
             <p id="cardapio">Cardápio</p>
