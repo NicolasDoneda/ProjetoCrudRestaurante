@@ -57,8 +57,6 @@
     --marginContainerCard: 1.5vw auto;
 }
 
-
-
 /* Bandeiras Itália */
 #verde, #branco, #vermelho {
     height: var(--heightBandeiraCorVerde);
@@ -150,13 +148,13 @@ body {
 }
 
 #card-tittle {
-      color: var(--colorCardTitle);
+    color: var(--colorCardTitle);
     font-family: var(--fontFamilyYesevaOne);
     font-size: clamp(1rem, 1.4vw, 1.6rem);
     line-height: 1.4;
-    max-width: var(--widthImgPratos); 
-    word-break: break-word; 
-    white-space: normal; 
+    max-width: var(--widthImgPratos);
+    word-break: break-word;
+    white-space: normal;
     text-align: center;
     box-sizing: border-box;
 }
@@ -245,35 +243,36 @@ body {
     box-shadow: 0 0 0 3px rgba(205, 127, 50, 0.3);
 }
 
-@media (max-width: 900px) {
+/* -------- MEDIA QUERIES -------- */
+@media (max-width: 900px) and (min-width: 601px) {
     .card-pratos {
-        width: 35vw;
-        min-height: 48vw;
+        width: 80vw;
+        min-height: auto;
         height: auto;
-        padding: 0.8rem;
+        padding: 1rem;
+    }
+
+    .img-pratos {
+        width: 50vw;
+        height: 30vw;
+        max-width: 100%;
+        object-fit: cover;
     }
 
     #card-desc {
-        font-size: clamp(1rem, 1.8vw, 1.1rem);
+        font-size: clamp(1rem, 2.2vw, 1.2rem);
     }
 
     #card-tittle {
-        font-size: 1vw;
-         max-width: 70vw;
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        max-width: 90vw;
     }
 
     #preco-card {
-        font-size: clamp(1rem, 2.5vw, 1.5rem);
-    }
-
-    .img-pratos{
-        width: 70vw;
-        height: 30vw;
-
-
-
+        font-size: clamp(1rem, 3vw, 1.6rem);
     }
 }
+
 
 @media (max-width: 600px) {
     .card-pratos {
@@ -294,5 +293,9 @@ body {
 
     #preco-card {
         font-size: clamp(1rem, 4vw, 1.5rem);
+    }
+    .img-pratos{
+        width: 60vw;
+        height: 40vw;
     }
 }

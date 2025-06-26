@@ -52,21 +52,21 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
                     <!-- ITENS DO CARROSEL -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="/ProjetoCrudRestaurante/public/Assets/images/images-home/prato1.png" class="d-block w-100 img-fluid MaisPedidosCarrosel-prato-img" alt="Prato 1" />
+                            <img src="/ProjetoCrudRestaurante/public/Assets/images/images-home/prato1.WEBP" class="d-block w-100 img-fluid MaisPedidosCarrosel-prato-img" alt="Prato 1" />
                             <div class="carousel-caption d-none d-md-block">
-                                <span>Spaghetti à Carbonara</span>
+                                <span>Musakhan</span>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="/ProjetoCrudRestaurante/public/Assets/images/images-home/prato2.png" class="d-block w-100 img-fluid MaisPedidosCarrosel-prato-img" alt="Prato 2" />
+                            <img src="/ProjetoCrudRestaurante/public/Assets/images/images-home/prato2.WEBP" class="d-block w-100 img-fluid MaisPedidosCarrosel-prato-img" alt="Prato 2" />
                             <div class="carousel-caption d-none d-md-block">
-                                <span>Risoto de Cogumelos</span>
+                                <span>Shawarma</span>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="/ProjetoCrudRestaurante/public/Assets/images/images-home/prato3.jpg" class="d-block w-100 img-fluid MaisPedidosCarrosel-prato-img" alt="Prato 3" />
                             <div class="carousel-caption d-none d-md-block">
-                                <span>Kebab</span>
+                                <span>Osso buco</span>
                             </div>
                         </div>
                     </div>

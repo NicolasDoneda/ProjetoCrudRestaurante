@@ -35,22 +35,24 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 
 header {
   width: 100%;
   background-color: var(--color-header-bg);
   font-family: var(--font-family);
-  height: 8vw;        
-  display: flex;       
-  align-items: center; 
+  height: 8vw;
+  display: flex;
+  align-items: center;
 }
 
 .header-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem; /* Padding lateral para dar "margem" */
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,6 +122,7 @@ nav ul li a:hover::after {
   transform: translateY(-4px);
 }
 
+/* ----------- FOOTER ------------ */
 footer {
   width: 100%;
   font-family: var(--font-family);
@@ -127,8 +130,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
   text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: auto;
 }
 
 .footer-content {
@@ -140,30 +144,22 @@ footer {
   gap: 1rem;
 }
 
-.footer-logo {
-  width: 120px;
-}
-
-.footer-logo img {
-  width: 100%;
-  display: block;
-}
-
 .footer-title {
   font-size: var(--font-size-xl);
   color: var(--color-footer-text);
 }
 
-/* RESPONSIVO */
+/* ----------- RESPONSIVO ----------- */
+
 @media (max-width: 900px) {
   .header-container {
     padding: 0.8rem 1rem;
   }
-  header{
-    height: 20vw;
 
-
+  header {
+    height: 10vw;
   }
+
   .header__logo {
     max-width: 120px;
   }
@@ -199,9 +195,11 @@ footer {
   nav {
     gap: 1rem;
   }
-  header{
+
+  header {
     height: 20vw;
   }
+
   nav ul {
     gap: 0.5rem;
   }

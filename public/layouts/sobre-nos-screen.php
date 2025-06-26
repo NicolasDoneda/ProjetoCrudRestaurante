@@ -25,7 +25,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
     <header>
         <?php include(__DIR__ . '/../includes/header.php'); ?>
     </header>
-  <section class="sobre-nos">
+  <div class="sobre-nos">
     <div class="conteudo">
       <h1>Sobre nós</h1>
       <p>
@@ -33,7 +33,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
         Fundado por Antoni Zighher no século XX, o restaurante é fruto de uma jornada única: desde a infância apaixonado pela cozinha italiana, Antoni se encantou ainda mais com a gastronomia ao trabalhar em um restaurante árabe na Bretanha, norte da França. Inspirado pela convivência com esses dois mundos, Zighher decidiu unir o melhor de cada um — as massas artesanais da Itália com os temperos vibrantes do Líbano — criando uma experiência gastronômica original, acolhedora e surpreendente. Foi assim que nasceu o AlDente & Za’atar: mais do que um restaurante, um lugar onde tradições se encontram e novos sabores ganham vida.
       </p>
     </div>
-  </section>
+  </div>
   <footer>
         <?php include(__DIR__ . '/../includes/footer.php'); ?>
     </footer>

@@ -8,14 +8,16 @@ body {
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 20vw 5vw;
+  padding: 80px 5vw;
   text-align: center;
   position: relative;
-  height: 90vh;
+  min-height: 90vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden; /* Previna qualquer transbordamento acidental */
 }
 
 .sobre-nos::before {
@@ -38,6 +40,7 @@ body {
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .sobre-nos h1 {
@@ -49,12 +52,15 @@ body {
 .sobre-nos p {
   font-size: 18px;
   line-height: 1.6;
+  margin: 0;
+  text-align: center;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 992px) {
   .sobre-nos {
-    padding: 15vw 4vw;
-    height: auto;
+    padding: 60px 4vw;
+    min-height: 90vh;
   }
 
   .sobre-nos .conteudo {
@@ -72,7 +78,8 @@ body {
 
 @media (max-width: 768px) {
   .sobre-nos {
-    padding: 15vw 3vw;
+    padding: 50px 3vw;
+    min-height: 90vh;
   }
 
   .sobre-nos h1 {
@@ -86,7 +93,8 @@ body {
 
 @media (max-width: 480px) {
   .sobre-nos {
-    padding: 25vw 5vw;
+    padding: 40px 5vw;
+    min-height: 90vh;
   }
 
   .sobre-nos .conteudo {

@@ -13,12 +13,7 @@
     <footer>
         <section class="footer-content">
 
-                <img
-                    src="/ProjetoCrudRestaurante/public/Assets/images/images-footer/logo-marca-footer.png"
-                    class="footer-logo"
-                    alt="Logotipo do Restaurante Al Dente Zaatar no rodapé"
-                    title="Al Dente Zaatar - Restaurante"
-                >
+            
                 <div>
                     <p class="footer-title">Todos os direitos reservados</p>
                     <p class="footer-title">© AlDenteZaatar.Inc</p>
